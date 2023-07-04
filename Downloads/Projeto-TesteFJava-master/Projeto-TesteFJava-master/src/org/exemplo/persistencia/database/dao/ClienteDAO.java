@@ -67,7 +67,14 @@ public class ClienteDAO implements IEntityDAO<Cliente> {
 
 	@Override
 	public Cliente findByCpf(String cpf) {
-		// TODO Auto-generated method stub
-		return null;
-	}
-}
+        try (Session session = conn.getSessionFactory().openSession()) {
+            String hql = "FROM Cliente c JOIN FETCH c.contas WHERE c.cpf = :cpf";
+            Query<Cliente> query = session.createQuery(hql, Cliente.class);
+            query.setParameter("cpf", cpf);
+            return query.uniqueResult();
+        } catch (Exception e) {
+            System.out.println("Ocorreu um erro ao buscar o cliente por CPF: " + e.getMessage());
+            e.printStackTrace();
+            return null;
+        }
+    }}

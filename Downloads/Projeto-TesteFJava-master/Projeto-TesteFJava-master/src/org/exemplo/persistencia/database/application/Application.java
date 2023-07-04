@@ -223,8 +223,8 @@ public class Application {
 										Transacao transacao = new Transacao(BigDecimal.valueOf(quantia), TipoTransacao.CREDITO, LocalDateTime.now());
                                         transacao.setConta(contaSelecionada);
                                         
-                                        IEntityDAO<Conta> Condao = new ContaDAO(new ConexaoBancoHibernate());
-										Condao.update(contaSelecionada);
+                                        IEntityDAO<Conta> Cont = new ContaDAO(new ConexaoBancoHibernate());
+										Cont.update(contaSelecionada);
 							
 										System.out.println("Depósito realizado com sucesso!");
 									} else {
@@ -281,8 +281,8 @@ public class Application {
 										Transacao transacao1 = new Transacao(BigDecimal.valueOf(quantia), TipoTransacao.CREDITO, LocalDateTime.now());
 										transacao1.setConta(contaSelecionada);
 										
-										IEntityDAO<Conta> Condao = new ContaDAO(new ConexaoBancoHibernate());
-										Condao.update(contaSelecionada);
+										IEntityDAO<Conta> Cont = new ContaDAO(new ConexaoBancoHibernate());
+										Cont.update(contaSelecionada);
 										TransacaoDAO.save(transacao1);
 
 										
@@ -387,7 +387,7 @@ public class Application {
 									if (transacoes.isEmpty()) {
 										System.out.println("Não há transações registradas para esta conta");
 									} else {
-										System.out.println("Extrato da conta:");
+										System.out.println("Extrato da conta:"); //impimir extrato
 										
 										for (Transacao transacao : transacoes) {
 											System.out.println("ID: " + transacao.getId());
@@ -401,7 +401,7 @@ public class Application {
 									System.out.println("Conta não encontrada ou não pertence ao cliente");
 								}							
 						} catch (Exception e ) {
-							System.out.println("Ocorreu um erro ao imprimir o extrato: " + e.getMessage());
+							System.out.println("Ocorreu um erro ao imprimir o extrato: " + e.getMessage()); 
 							e.printStackTrace();
 						}
 						
@@ -462,9 +462,9 @@ public class Application {
 	                    		for (Conta conta : contas) {
 	                    			saldoTotal = saldoTotal.add(conta.getSaldo());
 	                    		}
-	                    		System.out.println("Balaço total entre as contas: " + saldoTotal);     	
+	                    		System.out.println("Balaço total entre as contas: " + saldoTotal);     	//balanço
 	                    } catch (Exception e) {
-	                    	System.out.println("Ocorreu um erro ao calcular o balanço: " + e.getMessage());
+	                    	System.out.println("Ocorreu um erro ao calcular o balanço: " + e.getMessage()); //balanço
 	                    	e.printStackTrace();
 	                    }
 						

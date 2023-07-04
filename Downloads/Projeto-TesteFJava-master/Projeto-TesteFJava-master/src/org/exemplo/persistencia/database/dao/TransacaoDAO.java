@@ -45,10 +45,8 @@ public class TransacaoDAO implements IEntityDAO<Transacao> {
 	}
 	
 	public Transacao findById(Integer id) {
-		Session session = conn.getSessionFactory().openSession();
-		Transacao cliente = session.find(Transacao.class, id);
-		session.close();
-		return cliente;
+		// TODO Auto-generated method stub
+				return null;
 	}
 
 	@Override

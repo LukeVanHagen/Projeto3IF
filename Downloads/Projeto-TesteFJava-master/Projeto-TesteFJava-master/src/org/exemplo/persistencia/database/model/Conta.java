@@ -204,9 +204,9 @@ public class Conta {
 				BigDecimal taxa;
 				
 				if (tipoConta == TipoConta.CORRENTE) {
-					taxa = BigDecimal.valueOf(0.05);
+					taxa = BigDecimal.valueOf(0.1);  //a taxacao
 				} else if (tipoConta == TipoConta.POUPANCA) {
-				    taxa = BigDecimal.valueOf(0.02);   	  
+				    taxa = BigDecimal.valueOf(0.2);   	  
 				} else {
 					taxa = BigDecimal.ZERO;
 				}

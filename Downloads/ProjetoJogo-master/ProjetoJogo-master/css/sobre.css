@@ -1,0 +1,77 @@
+
+body{
+    background-color: rgb(255, 255, 255);
+    align-content: center;
+}
+@font-face {
+    font-family: [Dimitri];
+    src: url(DIMIS___.ttf) format ('TrueType');
+ }
+
+
+p{
+    font-family: 'Dimitri',Times ;
+    color: rgb(7, 7, 8);
+    font-size: 30px;
+
+
+}
+
+table{
+    display: flex;
+    margin-left: 20px;
+    flex-direction: row;
+    margin-top: -40%;
+   
+}
+a{
+    font-family: 'Dimitri',Times ;
+    color: #620CC3;
+    font-size: 30px; 
+}
+.cabeçalho{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2%;
+}
+
+.if {     
+    display: block; /* Certifique-se de que a imagem seja exibida como bloco */
+    margin-left: auto; /* Define a margem esquerda para "auto" para alinhar à direita */
+    max-width: 50%; /* Define a largura máxima da imagem para evitar que ela fique muito grande */
+    height: auto; /* Mantém a proporção de aspecto da imagem */
+    
+}
+:root { /*nao sei desse ,se tiver ou se tirar nao faz diferença */
+    --cor-primaria-VoltarMenu: rgba(96,12,196,1);
+    --cor-hover-VoltarMenu: rgba(0,212,255,1);
+    --cor-secundaria-VoltarMenu:  rgba(96,12,196,1);
+
+}
+
+/* Estilize o botão de "Ajuda" */
+#VoltarMenu {
+    background-color:rgba(96,12,196,1); /* Cor de fundo roxa */
+    color: white; /* Cor do texto branco */
+    padding: 10px 20px; /* Espaçamento interno do botão */
+    border: 2px solid white; /* Borda branca com 2px de largura */
+    cursor: pointer; /* Transforma o cursor em uma mãozinha ao passar o mouse */
+    max-width: 150px; /* Largura máxima do botão */
+    max-height: 50px; /* Altura máxima do botão */
+    width: auto; /* Largura automática, para ajustar ao conteúdo */
+    height: auto; /* Altura automática, para ajustar ao conteúdo */
+    text-align: center; /* Centraliza o texto horizontalmente */
+    margin-left: 100px;
+
+}
+
+#VoltarMenu:hover {
+    background-color: rgba(77,12,156);
+}
+
+#VoltarMenu:active {
+    background-color:rgba(152,97,221); 
+}
+

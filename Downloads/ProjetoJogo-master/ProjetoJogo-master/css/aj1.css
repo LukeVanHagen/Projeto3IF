@@ -1,0 +1,20 @@
+body{
+    background-color: black;
+    align-content: center;
+}
+@font-face {
+    font-family: [Dimitri];
+    src: url(DIMIS___.ttf) format ('TrueType');
+ }
+
+#respostas{
+    font-family: 'Dimitri',Times ;
+    color: aliceblue;
+    font-size: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 7%;
+    margin-bottom: 7%;
+}

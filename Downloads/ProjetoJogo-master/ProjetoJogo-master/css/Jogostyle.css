@@ -1,0 +1,157 @@
+body{
+background: rgb(255, 255, 255);
+margin: 0%;
+}
+
+input {
+	max-width: 3em;
+	max-height: 3em;
+	font-size: 13px;
+	text-transform: uppercase;
+}
+td {
+	max-width: 6em;
+	max-height: 6em;
+	font-size: 13px;
+}
+th{
+    max-width: 3em;
+	max-height: 3em;
+    font-family: 'Dimitri',Times ;
+    color: white;
+    font-size: 30px;
+}
+tr {
+	max-width: 3em;
+	max-height: 3em;
+    font-family: 'Dimitri',Times ;
+    color: white;
+    font-size: 30px;
+
+}
+/* id para quadradinhos vazios*/
+#vazio {
+	max-width: 38px;
+	max-height: 38px;
+	gap: flex 5px;
+}
+
+#cruzada {
+	position: center;
+	padding-top: 5%;
+	padding-bottom:5%;
+    
+    margin-top: 0%;
+	padding-left: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#dicas {
+	padding-left: 5%;
+    font-family: 'Dimitri',Times ;
+    color: white;
+    font-size: 30px;
+    
+	
+}
+:root {
+    --cor-primaria-enviar: rgba(116,29,223);
+    --cor-hover-enviar: rgba(77,12,156);
+    --cor-secundaria-enviar:  rgba(152,97,221);
+
+}
+
+
+#linha{
+    font-family: 'Dimitri',Times ;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 2%;
+    
+  
+    
+}
+nav{
+    box-sizing:border-box;
+    width:100%;
+    height: 100px;
+    background: linear-gradient(90deg, rgb(122, 119, 182) 0%, rgb(123, 86, 168) 26%, rgb(103, 43, 153) 100%);
+    justify-content: flex-start;
+    align-items: center;
+  }
+  #linha h2{
+    margin: 0;
+    
+}
+
+#ajuda{
+    background-color: var(--cor-primaria-enviar);
+    outline: none;
+    
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 1%;
+    height: 25%;
+    width: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-bottom:0% ;
+    margin-bottom: 5%;
+    margin-top: 0%;
+    font-family: 'Dimitri',Times ;
+    color: white;
+    font-size: 30px;
+}
+#ajuda:hover {
+    background-color: var(--cor-hover-enviar);
+    font-family: 'Dimitri',Times ;
+    color: white;
+    font-size: 30px;
+}
+#ajuda:active {
+    color:var(--cor-primaria-enviar);
+    background-color: var(--cor-secundaria-enviar);
+}
+
+#volta{
+    background-color: var(--cor-primaria-enviar);
+    outline: none;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 1%;
+    height: 80%;
+    width: 20%;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-bottom:0% ;
+    margin-bottom: 5%;
+    margin-top: 0%;
+    font-family: 'Dimitri',Times ;
+    color: white;
+    font-size: 30px;
+}
+
+#volta:hover{
+    background-color: var(--cor-hover-enviar);
+    font-family: 'Dimitri',Times ;
+    color: white;
+    font-size: 30px;
+}
+
+#volta:active{
+    color:var(--cor-primaria-enviar);
+    background-color: var(--cor-secundaria-enviar);
+}

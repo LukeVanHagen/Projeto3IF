@@ -1,0 +1,192 @@
+body{
+background: rgb(255, 255, 255);
+margin: 0%;
+}
+
+
+
+
+
+    
+	
+
+:root {
+    --cor-primaria-enviar: rgba(116,29,223);
+    --cor-hover-enviar: rgba(77,12,156);
+    --cor-secundaria-enviar:  rgba(152,97,221);
+
+}
+
+
+#linha{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 2%;
+    
+  
+    
+}
+nav{
+    box-sizing:border-box;
+    width:100%;
+    height: 100px;
+    background: linear-gradient(90deg, rgb(122, 119, 182) 0%, rgb(123, 86, 168) 26%, rgb(103, 43, 153) 100%);
+    justify-content: flex-start;
+    align-items: center;
+  }
+  #linha h2{
+    margin: 0;
+    
+}
+
+#ajuda{
+    background-color: var(--cor-primaria-enviar);
+    outline: none;
+    
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 20px;
+    height: 25%;
+    width: 10%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-bottom:0% ;
+    margin-bottom: 5%;
+    margin-top: 0%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    font-size: 30px;
+}
+#ajuda:hover {
+    background-color: var(--cor-hover-enviar);
+   
+    color: white;
+    font-size: 30px;
+}
+#ajuda:active {
+    color:var(--cor-primaria-enviar);
+    background-color: var(--cor-secundaria-enviar);
+}
+
+#volta{
+    background-color: var(--cor-primaria-enviar);
+    outline: none;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 20px;
+    height: 80%;
+    width: 20%;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding-bottom:0% ;
+    margin-bottom: 5%;
+    margin-top: 0%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+    font-size: 30px;
+}
+
+#volta:hover{
+    background-color: var(--cor-hover-enviar);
+    
+    color: white;
+    font-size: 30px;
+}
+
+#volta:active{
+    color:var(--cor-primaria-enviar);
+    background-color: var(--cor-secundaria-enviar);
+}
+
+/* Css das tabelinhas e outras coisa se der certo*/
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 24px;
+    margin-top: 10px;
+  }
+
+  h2 {
+    font-size: 20px;
+  }
+
+  /* Estilos do labirinto */
+  .maze {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    width: 300px;
+    gap: 2px;
+    margin-top: 20px;
+    
+  }
+
+
+  .cell {
+    width: 30px;
+    height: 30px;
+    border: 1px solid #71118e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 10px;
+  }
+
+  .cell.start {
+    background-color: #0f0; /* Verde para o ponto de início */
+  }
+
+  .cell.end {
+    background-color: rgb(170, 228, 187); /* Vermelho para o ponto final */
+  }
+
+  .cell.wall {
+    background-color: #000; /* Preto para as paredes */
+  }
+
+  .cell.powerup {
+    background-color: rgb(99, 99, 210); /* Azul para o campo de força */
+    color: #fff; /* Cor do texto das células de campo de força */
+  }
+
+  .cell.bomba {
+    background-color: #f00; /* Vermelho para as bombas */
+  }
+
+  .cell.player {
+    background-color: #ff0; /* Amarelo para o jogador */
+  }
+
+  .info-elementos {
+    background-color: greenyellow;
+    width: 200px;
+    height: 130px;
+    text-align: center;
+    border-radius: 20px;
+    
+  }
+
+  .game-contens {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }

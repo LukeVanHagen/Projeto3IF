@@ -4,7 +4,7 @@ Controle de Acesso ao Laboratório Universitário
 
 
 
-O projeto de Controle de Acesso ao Laboratório Universitário se insere no ambiente acadêmico de um campus universitário. Este laboratório desempenha um papel fundamental no suporte às atividades de ensino e pesquisa da instituição. No entanto, o acesso desorganizado e a falta de controle efetivo têm causado problemas de segurança, além de dificuldades na gestão de recursos e no uso adequado do espaço.
+O projeto de Controle de Acesso ao Laboratório Universitário se insere no ambiente acadêmico de um campus universitário. Este laboratório desempenha um papel fundamental no suporte às atividades de ensino e pesquisa da instituição. No entanto, o acesso desorganizado e a falta de controle efetivo pode causar problemas de segurança, além de dificuldades na gestão de recursos e no uso adequado do espaço.
 
 
 
@@ -62,7 +62,7 @@ O sistema de Controle de Acesso ao Laboratório Universitário incluirá as segu
 4. Monitoramento em tempo real das entradas e saídas do laboratório.
 5. Alertas de acesso não autorizado ou tentativas suspeitas.
 6. Relatórios de uso do laboratório para fins de gestão e auditoria.
-
+   
 
 
 

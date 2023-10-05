@@ -21,10 +21,20 @@
         </style>
     </head>
     <body class="antialiased">
-       
+    <header>
+      
+    <nav>
+  <ul class="navigation-menu">
+    <li><a href="#" class="strong">Home</a></li>
+    <li><a href="#locate" class="underline">Sobre</a></li>
+    <li><a href="#" class="underline">Contato</a></li>
+  </ul>
+</nav>
+  </header>
             
         <section class="hero">
-          <h1>Controle de Acesso ao Laboratório Universitário</h1>
+          <h1>Sejam bem vindos ao CEEP!</h1>
+          <h2>CEEP,Control of Entry and Exit of People.Esse sistema tem a finalinade de controlar a entrada de alunos nos laboratórios do campus IFPE.</h2>
           @if (Route::has('login'))
           <div class="btn-group">
             @auth
@@ -44,18 +54,21 @@
           </div>
           @endif
         </section>
+        <br>
+        <br>
+        <br>
 
         <section>
-        <h2>Digite algo aqui</h2>
+        
 
         <ul class="shop-pets">
             <li class="card-large card-light" id="sup-dog">
                
                 <ul>
-                    Digite aqui
-                    <li><a href="#">Aqui tambem se quiser</a></li>
-<!-- Esses botoes talvez fique -->
-                    <button class="btn-outline-light">Veja</button>
+                Proposta
+                    <li><a href="#">Os usuários autorizados terão cartões para acesso, enquanto registros detalhados serão mantidos para segurança e auditoria.</a></li>
+
+                    
 
                 </ul>
 
@@ -64,34 +77,34 @@
 
             <li class="card-large card-dark" id="sup-cat">
                
-                <ul>Digite aqui
-                    <li><a href="#">Aqui tambem se quiser</a></li>
+                <ul>
+                    Tecnologias
+                    <li><a href="#">Cartões de acesso RFID/NFC.
+                         <li><a>Banco de dados SQL.</a></li>
+                         <li><a>Aplicativo web de administração.</a></li>
+                         <li><a>Sensores de presença para ocupação.</a></li>
                     
-                    <button class="btn-outline-light">Veja</button>
-                </ul>
-
-            </li>
-
-            <li class="card-large card-dark" id="sup-bird">
-               
-                <ul>Digite aqui
-                    <li><a href="#">Aqui tambem se quiser</a></li>
-                    <button class="btn-outline-light">Veja</button>
+                    
                 </ul>
 
             </li>
             <li class="card-large card-light" id="sup-fish">
                
                 <ul>
-                    Digite algo
-                    <li><a href="#">Aqui tambem se quiser</a></li>
+                Funcionalidades
+                    <li><a href="#">Registro de usuários autorizados e horários de acesso.
+                    <li><a>Monitoramento em tempo real de entradas e saídas.</a></li>
+                    <li><a>Alertas de acesso não autorizado.</a></li>
+                    <li><a>Relatórios de uso para gestão e auditoria.</a></li> <!-- ajeitar essa funcionalidade-->
                     
-                    <button class="btn-outline-light">Veja</button>
+                    
                 </ul>
 
             </li>
         </ul>
     </section>
+    <br>
+    <br>
 
     <section id="locate">
 
@@ -99,9 +112,11 @@
             <h2>Sobre</h2>
             <p>A solução proposta é a implementação de um sistema de controle de acesso baseado em tecnologia. Este sistema utilizará cartões de acesso eletrônicos e um software de gestão que permitirá o controle centralizado das entradas e saídas do laboratório. Os usuários autorizados terão cartões que lhes permitirão acessar o laboratório durante os horários estipulados, enquanto um registro detalhado de todas as atividades será mantido para fins de segurança e auditoria.</p>
             <div class="btn-group">
-                <button class="btn-outline-dark btn-hover-color">GitHub</button>
+                <button class="btn-outline-dark btn-hover-color">
+  <a href="https://github.com/seu-usuario" target="_blank" class="btn-outline-dark btn-hover-color">GitHub</a>
             </div>
-        </div>
+            </button>
+            </div>
     </section>
 
     <footer>
@@ -114,3 +129,4 @@
 
     </body>
 </html>
+

@@ -1,0 +1,471 @@
+/* welcome */
+
+body {
+    font-family: "Poppins", sans-serif;
+	font-weight: 500;
+	transition: all 0.2s ease;
+
+	background: #f9f9f9;
+    margin: 0;
+	width: 100vw;
+	overflow-x: hidden;
+}
+
+/* session 1 */
+
+section.hero {
+	/*    width: 100%;*/
+	height: auto;
+	background: #50117F;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: flex-start;
+	grid-gap: 48px;
+	display: inline-flex;
+}
+
+section.hero h1 {
+	font-size: 40px;
+	font-weight: 600;
+	line-height: 1.2;
+	width: 40%;
+
+	color: white
+}
+
+.btn-a {
+    text-decoration: none;
+}
+
+:root {
+    --pg-margin: 16px;
+}
+
+section:not(.hero) {
+	padding: calc(var(--pg-margin) / 2) var(--pg-margin);
+}
+
+section h2 {
+	font-size: 32px;
+	font-weight: 600;
+	line-height: 1.2;
+	text-align: center;
+	color: #45413e;
+	margin-bottom: 32px;
+	/*    padding-bottom: 24px;*/
+}
+
+/*seccion 2*/
+
+.shop-pets {
+		display: flex;
+		flex-direction: column;
+		grid-gap: 24px;
+		width: 100%;
+	}
+
+.card-large {
+	flex: 1;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	transition: all 0.2s ease;
+	cursor: pointer;
+}
+
+.card-large {
+	box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+	border-radius: 12px;
+	overflow: hidden;
+	
+}
+
+.card-large:hover {
+	box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.15);
+	transform: scale(1.01);
+}
+
+.card-large a {
+	text-decoration: none;
+	font-weight: 600;
+}
+
+.card-large > a {
+	position: absolute;
+	bottom: 0;
+	z-index: 1;
+	width: 100%;
+	font-size: 24px;
+	line-height: 1.2;
+}
+
+.card-large > ul {
+	
+	display: flex;
+	flex-direction: column;
+	grid-gap: 8px;
+	flex: 1;
+	color: #45413e;
+	padding: 0 40px 40px;
+	font-size: 28px;
+	font-weight: 600;
+	line-height: 1.5;
+    
+}
+
+.card-large > ul > li a {
+	line-height: 32px;
+	font-size: 16px;
+
+}
+
+li {
+    list-style: none;
+}
+
+/*Cores dos cards */
+
+/*Primeiro card */
+.card-large#sup-dog,
+.card-med#sup-dog   {
+	background: #51BAF2;
+}
+
+ /* Segundo card*/
+ .card-large#sup-cat,
+ .card-med#sup-cat  {
+     background: #A284E8;
+ }
+
+ /* o ultimo card */
+.card-large#sup-fish,
+.card-med#sup-fish  {
+	background: #399DAB;
+}
+ 
+/*O card 3 ta em branco*/
+
+.card-large.card-dark a,
+.card-large.card-dark > ul {
+	color: #45413e;
+}
+
+.card-large.card-light a,
+.card-large.card-light > ul {
+	color: white;
+}
+
+.card-large > ul > li:last-of-type {
+	margin-bottom: 40px;
+}
+
+.card-large button {
+	margin-top: auto;
+}
+
+/* Butoes */
+
+button {
+	font-size: 14px;
+	font-weight: 600;
+	line-height: 24px;
+	padding: 12px 24px;
+	border-radius: 48px;
+	display: flex;
+	flex-direction: row;
+	grid-gap: 8px;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}
+
+/* esse é o vazado*/
+button.btn-outline {
+	color: #f9f9f9;
+	border-color: #f9f9f9;
+}
+
+button.btn-outline-light {
+	color: #f9f9f9;
+	background: none;
+	color: #f9f9f9;
+	border: 2px solid #f9f9f9;
+}
+
+button.btn-outline-dark {
+	color: #51BAF2;
+	background: none;
+	color: #51BAF2;
+	border: 2px solid #51BAF2;
+}
+
+/*Esse é o preenchido*/
+button.btn-filled-dark {
+	color: #f9f9f9;
+	background: #51BAF2;
+	color: #f9f9f9;
+	border: 2px solid #51BAF2;
+}
+
+/*Esse é o vazado com o hover*/
+.btn-outline-dark:hover {
+	background: #45413e;
+	border: 2px solid  #45413e;
+}
+
+.btn-outline-light:hover {
+	background: #f9f9f9;
+	border: 2px solid #f9f9f9;
+	color:  #45413e;
+}
+
+button:hover,
+.btn-outline-dark.btn-hover-color:hover {
+	color: black;
+	border: 2px solid #51BAF2;
+	background: #51BAF2;
+	transition: all 0.2s ease;
+	box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.15);
+}
+
+.btn-group {
+	display: flex;
+	flex-direction: row;
+	grid-gap: 16px;
+}
+
+/*sobre*/
+
+#locate > div {
+	background: #50117F;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 80px 0;
+	border-radius: 12px;
+	box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
+	transition: all 0.2s ease;
+	cursor: pointer;
+}
+
+#locate > div:hover {
+	box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.15);
+}
+
+#locate h2 {
+	margin-top: 0;
+	color: white;
+}
+
+#locate p {
+	line-height: 1.5;
+	margin-bottom: 40px;
+	width: 50%;
+	text-align: center;
+	color: white;
+}
+
+
+/*footer*/
+
+section,
+footer {
+	position: relative;
+	width: 100%;
+	padding: 0 16px
+}
+footer {
+	background: #45413e;
+	padding: 80px 80px 0px;
+	margin-top: 80px;
+	display: flex;
+}
+
+footer ul {
+	display: flex;
+	flex-direction: column;
+	grid-gap: 24px;
+	box-shadow: none;
+	flex: 1;
+	color: #f9f9f9;
+	font-size: 18px;
+	font-weight: 600;
+	margin-bottom: 80px;
+}
+
+footer ul li a {
+	color: #f9f9f9;
+	text-decoration: none;
+	font-size: 14px;
+}
+
+footer ul li {
+	color: #f9f9f9;
+	padding: 0;
+}
+
+/* Responsividade */
+
+@media only screen and (max-width: 600px) {
+	:root {
+		--pg-margin: 16px;
+	}
+
+	section.hero {
+		aspect-ratio: 1/1;
+		padding-top: 64px;
+	}
+
+	section.hero h1 {
+		--hero-text: 40px;
+		width: 80%;
+	}
+
+	section.hero {
+		background-size: 85%;
+		background-position: 360% 60%;
+	}
+
+	.btn-group {
+		flex-direction: column;
+	}
+
+
+	section:not(.hero) {
+		padding: var(--pg-margin);
+	}
+
+	#locate p {
+		width: 80%;
+	}
+
+	footer {
+		flex-direction: column;
+		text-align: center;
+	}
+
+    .shop-pets {
+		display: flex;
+		flex-direction: column;
+		grid-gap: 24px;
+		width: 100%;
+	}
+}
+
+@media only screen and (min-width: 600px) {
+	:root {
+		--pg-margin: 24px;
+	}
+
+	section.hero h1 {
+		--hero-text: 40px;
+		width: 60%;
+	}
+
+	section.hero {
+		aspect-ratio: 3/2;
+		background-size: 50%;
+		background-position: 90% 70%;
+		padding-top: 64px;
+	}
+
+
+
+
+	.btn-group {
+		display: flex;
+		flex-direction: column;
+	}
+
+
+	section:not(.hero) {
+		padding: 0
+	}
+
+	#locate p {
+		width: 60%;
+	}
+
+	footer {
+		flex-direction: column;
+		text-align: center;
+	}
+
+    .shop-pets {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-row: auto;
+		grid-column-gap: 24px;
+		grid-row-gap: 24px;
+	}
+}
+
+@media only screen and (min-width: 1200px) {
+	:root {
+		--pg-margin: 48px;
+	}
+
+	section.hero h1 {
+		--hero-text: 48px;
+	}
+
+	section.hero {
+		aspect-ratio: 2/1;
+	}
+
+	.btn-group {
+		flex-direction: row;
+	}
+
+	
+	#locate p {
+		width: 40%;
+	}
+
+	footer {
+		flex-direction: row;
+		text-align: left;
+	}
+
+    .shop-pets {
+		display: flex;
+		flex-direction: row;
+		grid-gap: 24px;
+	}
+}
+
+/* Mais um extra pra desktopp*/
+@media only screen and (min-width: 1200px) {
+	:root {
+		--pg-margin: 80px;
+	}
+
+	section.hero h1 {
+		--hero-text: 56px;
+	}
+
+
+	section.hero {
+		aspect-ratio: 3/1;
+		background-size: 30%;
+		background-position: 90% 60%;
+	}
+
+
+	#locate p {
+		width: 40%;
+	}
+
+	footer {
+		flex-direction: row;
+		text-align: left;
+	}
+
+    .shop-pets {
+		display: flex;
+		flex-direction: row;
+		grid-gap: 24px;
+	}
+}

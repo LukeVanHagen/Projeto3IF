@@ -15,6 +15,21 @@
             <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
+        <div class="mt-4">
+            <x-input-label for="matricula" value="{{ __('Matrícula') }}" />
+            <x-text-input id="matricula" class="block mt-1 w-full" type="text" name="matricula" :value="old('matricula')" required autofocus />
+        </div>
+
+        <div class="mt-4">
+            <x-input-label for="rfid" value="{{ __('RFID') }}" />
+            <x-text-input id="rfid" class="block mt-1 w-full" type="text" name="rfid" :value="old('rfid')" required />
+        </div>
+
+        <div class="mt-4">
+            <x-input-label for="role" value="{{ __('Role') }}" />
+            <x-text-input id="role" class="block mt-1 w-full" type="text" name="role" :value="old('role')" required />
+        </div>
+
 
         <!-- Password -->
         <div class="mt-4">

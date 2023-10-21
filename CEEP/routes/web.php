@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
+use App\Http\Controllers\RegistroController;
+use App\Http\Controllers\LocalController;
 
 /*
 |--------------------------------------------------------------------------
@@ -27,5 +30,12 @@ Route::middleware('auth')->group(function () {
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
+
+
+Route::get('/registros', [RegistroController::class, 'index'])->name('registros.index');
+Route::post('/registros/store', [RegistroController::class, 'store'])->name('registros.store');
+
+Route::get('/local/create', [LocalController::class, 'create'])->name('local.create');
+Route::post('/local', [LocalController::class, 'store'])->name('local.store');
 
 require __DIR__.'/auth.php';

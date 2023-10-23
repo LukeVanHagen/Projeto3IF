@@ -1,0 +1,37 @@
+ /* esse body é pra todos*/
+
+body {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/*Estilo da page de login */
+
+/*Todas essas tags estão no guest.blade.php no views*/
+
+.container {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+
+}
+
+.login-box {
+
+    width: auto;
+    height: auto;
+    padding: 20px;
+    background-color: #dddbdf;
+    border-radius: 1em;
+    box-shadow: 0 0 5px #6133ac; 
+    color: #ffffff;
+
+}
+
+
+

@@ -13,7 +13,7 @@ O projeto de Controle de Acesso ao Laboratório Universitário se insere no ambi
 
 
 
-O problema central que será abordado é a falta de um sistema eficaz de controle de acesso ao laboratório. Atualmente, o acesso é baseado em chaves físicas, o que resulta em desafios significativos, como perda de chaves, acesso não autorizado e falta de rastreabilidade das entradas e saídas.
+O problema central que será abordado é a falta de um sistema eficaz de controle de acesso em um laboratório. O acesso é baseado em chaves físicas, o que pode resultar em desafios significativos, como perda de chaves, acesso não autorizado e falta de rastreabilidade das entradas e saídas.
 
 
 
@@ -21,7 +21,7 @@ O problema central que será abordado é a falta de um sistema eficaz de control
 
 
 
-É de extrema importância resolver este problema por diversas razões. Primeiramente, a segurança dos equipamentos caros e dados sensíveis presentes no laboratório é crucial. Além disso, a falta de controle adequado prejudica a utilização eficiente do espaço, resultando em conflitos de agenda e subutilização. Sem mencionar que a falta de um sistema eficaz de controle de acesso compromete a integridade da pesquisa e o cumprimento das normas de segurança da universidade.
+É importante resolver este ponto de interesse por algumas razões. Primeiramente, a segurança dos equipamentos caros e dados sensíveis presentes no laboratório é crucial. Além disso, a falta de controle adequado pode prejudicar a utilização eficiente do espaço, resultando em conflitos de agenda e subutilização. Sem mencionar que a falta de um sistema eficaz de controle de acesso compromete a integridade da pesquisa e o cumprimento das normas de segurança da universidade.
 
 
 
@@ -63,15 +63,6 @@ O sistema de Controle de Acesso ao Laboratório Universitário incluirá as segu
 5. Alertas de acesso não autorizado ou tentativas suspeitas.
 6. Relatórios de uso do laboratório para fins de gestão e auditoria.
    
-
-
-
-
-É importante pesquisar soluções semelhantes em outras instituições acadêmicas ou laboratórios de pesquisa para aprender com suas experiências e melhores práticas. Essas soluções podem incluir sistemas de controle de acesso baseados em cartões, aplicativos web de gestão e sistemas de monitoramento.
-
-
-
-
 
 O banco de dados do sistema conterá as seguintes tabelas:
 

@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Forms para captura e envio de dados para aplicação laravel atraves do method POST</title>
+    <title>Forms para captura e envio de dados para aplicação Laravel através do método POST</title>
     <style>
-        
         body {
             background-color: #ffffff;
             background-image: url('bg-image.png');
@@ -15,7 +14,6 @@
             margin: 0;
         }
 
-        
         .login-box {
             width: auto;
             height: auto;
@@ -26,14 +24,12 @@
             color: #6133ac;
         }
 
-        
         form {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        
         input[type="text"] {
             margin: 40px;
             width: 220px;
@@ -42,7 +38,6 @@
             border-radius: 5px;
         }
 
-        
         input[type="submit"] {
             background-color: #6133ac;
             color: #ffffff;
@@ -52,12 +47,11 @@
             cursor: pointer;
         }
 
-        
         input[type="submit"]:hover {
             background-color: #451f8a;
         }
 
-        .tittle {
+        .title {
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
             color: #ffffff;
             font-size: 40px;
@@ -65,12 +59,12 @@
     </style>
 </head>
 <body>
-<div class="tittle">
+<div class="title">
     <h1>CEEP</h1>
 </div>
 
 <form action="https://seu-site-laravel.com/rota-do-laravel" method="POST">
-    <input type="text" name="campo1" placeholder="Aproxime sua Chave Identificadora">
+    <input type="text" name="campo1" placeholder="Aproxime sua Chave Identificadora" autofocus>
     <input type="submit" value="Enviar">
 </form>
 

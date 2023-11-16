@@ -10,7 +10,8 @@ class LocalController extends Controller
 
         public function create()
     {
-        return view('local.create');
+        $locais = Local::all();
+        return view('local.create', compact('locais'));
     }
     public function store(Request $request)
 {

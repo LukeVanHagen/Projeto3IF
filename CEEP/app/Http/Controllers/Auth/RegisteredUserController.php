@@ -30,28 +30,39 @@ class RegisteredUserController extends Controller
      */
     public function store(Request $request): RedirectResponse
     {
-        $request->validate([
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:'.User::class],
-            'password' => ['required', 'confirmed', Rules\Password::defaults()],
-            'matricula' => ['nullable', 'string'], 
-            'rfid' => ['nullable', 'string'], 
-            'role' => ['nullable', 'string'], 
-        ]);
+        try {
+            $request->validate([
+                'name' => ['required', 'string', 'max:255'],
+                'email' => ['required', 'string', 'email', 'max:255', 'unique:' . User::class],
+                'password' => ['required', 'confirmed', Rules\Password::defaults()],
+                'matricula' => ['nullable', 'string'],
+                'rfid' => ['nullable', 'string'],
+                'role' => ['nullable', 'string'],
+            ]);
 
-        $user = User::create([
-            'name' => $request->name,
-            'email' => $request->email,
-            'password' => Hash::make($request->password),
-            'matricula' => $request->matricula, 
-            'rfid' => $request->rfid, 
-            'role' => $request->role, 
-        ]);
+            $user = User::create([
+                'name' => $request->name,
+                'email' => $request->email,
+                'password' => Hash::make($request->password),
+                'matricula' => $request->matricula,
+                'rfid' => $request->rfid,
+                'role' => $request->role,
+            ]);
 
-        event(new Registered($user));
+            event(new Registered($user));
 
-        Auth::login($user);
+            Auth::login($user);
 
-        return redirect(RouteServiceProvider::HOME);
+            // Adicione esta linha para verificar se o usuário foi criado com sucesso
+            \Log::info('Usuário criado com sucesso:', ['user_id' => $user->id, 'email' => $user->email]);
+
+            return redirect(RouteServiceProvider::HOME);
+        } catch (\Exception $e) {
+            // Adicione esta linha para verificar se ocorreu algum erro
+            \Log::error('Erro ao criar usuário:', ['error' => $e->getMessage()]);
+
+            // Adicione aqui a lógica para lidar com o erro, se necessário
+            return back()->withInput()->withErrors(['error' => 'Erro ao cadastrar usuário']);
+        }
     }
 }

@@ -1,37 +1,185 @@
- /* esse body é pra todos*/
+/* Start Global Style */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 body {
-    background-color: #ffffff;
+    background: #f9f9f9;
     display: flex;
     justify-content: center;
     align-items: center;
     height: 100vh;
+    font-family: sans-serif;
 }
-
-/*Estilo da page de login */
-
-/*Todas essas tags estão no guest.blade.php no views*/
 
 .container {
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-   
-
-}
-
-.login-box {
-
-    width: auto;
-    height: auto;
+    width: 80%;
+    margin: auto;
     padding: 20px;
-    background-color: #dddbdf;
-    border-radius: 1em;
-    box-shadow: 0 0 5px #6133ac; 
-    color: #ffffff;
+    height: 100%;
+}
 
+.login,
+.register {
+    width: 50%;
+}
+
+/* Start Card Style */
+.card {
+    display: flex;
+    border-radius: 16px;
+    overflow: hidden;
+    width: 80%; /* ou qualquer valor que você deseja */
+    margin: auto; 
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07),
+                0 2px 4px rgba(0, 0, 0, 0.07),
+                0 4px 8px rgba(0, 0, 0, 0.07),
+                0 8px 16px rgba(0, 0, 0, 0.07),
+                0 16px 32px rgba(0, 0, 0, 0.07),
+                0 32px 64px rgba(0, 0, 0, 0.07);
 }
 
 
+/* Start Login Style */
+.login {
+    float: left;
+    background-image: linear-gradient(135deg, #23212f 5%, #9526a9 95%);
+    color: #fff;
+    padding: 100px 20px;
+    border-radius: 16px 0 0 16px;
+    text-align: center;
+}
 
+
+.login h1 {
+    margin-bottom: 40px;
+    font-size: 2.5em;
+}
+
+.login input[type="email"],
+.login input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 30px;
+    border: none;
+    background-color: #eeeeef;
+}
+
+.login input[type="checkbox"] {
+    float: left;
+    margin-right: 5px;
+}
+
+.login span {
+    float: left;
+}
+
+.login a {
+    float: right;
+    text-decoration: none;
+    color: #000;
+    transition: 0.3s all ease-in-out;
+}
+
+.login a:hover {
+    color: #fff;
+    font-weight: bold;
+}
+
+.login button {
+    width: 100%;
+    margin: 30px 0;
+    padding: 10px;
+    border: none;
+    background-color: #fff;
+    color: #9526a9;
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.3s all ease-in-out;
+}
+
+.login button:hover {
+    width: 97%;
+    font-size: 22px;
+    border-radius: 5px;
+}
+
+.login hr {
+    width: 30%;
+    display: inline-block;
+}
+
+.login p {
+    display: inline-block;
+    margin: 0px 10px 30px;
+}
+
+.login ul {
+    list-style: none;
+    margin-bottom: 40px;
+}
+
+.login ul li {
+    display: inline-block;
+    margin-right: 30px;
+    cursor: pointer;
+}
+
+.login ul li:hover {
+    opacity: 0.6;
+}
+
+.login ul li:last-child {
+    margin-right: 0;
+}
+
+.login .copyright {
+    display: inline-block;
+    float: none;
+}
+.login input[type="email"]:valid,
+.login input[type="password"]:valid,
+.register input[type="text"]:valid,
+.register input[type="email"]:valid,
+.register input[type="password"]:valid {
+    color: #000; 
+}
+
+/* Start Register Style */
+.register {
+    float: right;
+    background-image: linear-gradient(135deg, #23212f 5%, #9526a9 95%);
+    color: #fff;
+    padding: 100px 20px;
+    border-radius: 0 16px 16px 0;
+    text-align: center;
+}
+.register h2 {
+    margin: 30px 0;
+    font-size: 50px;
+    letter-spacing: 3px;
+}
+
+.register p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.register button {
+    background-color: transparent;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: 0.2s all ease-in-out;
+}
+
+.register button:hover {
+    color: #9526a9;
+    background-color: #fff;
+    cursor: pointer;
+}

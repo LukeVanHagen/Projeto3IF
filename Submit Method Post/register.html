@@ -1,65 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário de Registro</title>
-</head>
-<body>
-    <h2>Formulário de Registro</h2>
+<form action="http://127.0.0.1:8000/api/form-data" method="POST">
+    @csrf
+    <label for="user_id">User ID:</label>
+    <input type="text" name="user_id" required>
 
-    <form id="registroForm" method="POST" action="http://127.0.0.1:8000/api/form-data">
-        @csrf
-        <label for="user_id">User ID:</label>
-        <input type="text" name="user_id" required>
+    <label for="card_data">Card Data:</label>
+    <input type="text" name="card_data" required>
 
-        <label for="card_data">Card Data:</label>
-        <input type="text" name="card_data" required>
-
-        <button type="submit">Submit</button>
-    </form>
-
-    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
-    <script>
-        $(document).ready(function() {
-            var match = document.cookie.match(/XSRF-TOKEN=([^;]+)/);
-            var csrfToken = match ? match[1] : null;
-
-            // Adiciona um evento de clique ao botão de envio do formulário
-            $("#registroForm").submit(function(event) {
-                event.preventDefault(); // Impede o envio padrão do formulário
-
-                if (csrfToken) {
-                    // Adiciona o token CSRF ao cabeçalho da solicitação
-                    $.ajaxSetup({
-                        headers: {
-                            'X-CSRF-TOKEN': csrfToken
-                        }
-                    });
-
-                    // Envia a solicitação AJAX
-                    $.ajax({
-                        url: 'http://127.0.0.1:8000/api/form-data',
-                        method: 'POST',
-                        data: $("#registroForm").serialize(),
-                        success: function(response) {
-                            console.log(response); // Manipula a resposta do servidor
-                        },
-                        error: function(error) {
-                            if (error.responseJSON && error.responseJSON.errors) {
-                                // Exibir mensagens de erro de validação
-                                console.log(error.responseJSON.errors);
-                            } else {
-                                // Exibir outro tratamento de erro, se necessário
-                                console.log(error);
-                            }
-                        }
-                    });
-                } else {
-                    console.error('CSRF Token não encontrado no cookie.');
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+    <button type="submit">Submitt</button>
+</form> 

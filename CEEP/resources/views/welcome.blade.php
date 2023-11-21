@@ -25,7 +25,7 @@
       
     <nav>
   <ul class="navigation-menu">
-    <li><a href="#" class="strong">Home</a></li>
+    <li><a href="#" class="strong underline">Home</a></li>
     <li><a href="#locate" class="underline">Sobre</a></li>
     <li><a href="#" class="underline">Contato</a></li>
   </ul>
@@ -43,11 +43,11 @@
             </button>
             @else
             <button class="btn-filled-dark">
-                <a href="{{ route('login') }}" class="btn-a">Entrar</a>
+                <a href="{{ route('login') }}" class="btn-outline-dark btn-hover-color">Entrar</a>
             </button>
                @if (Route::has('register'))
-               <button class="btn-outline-dark btn-hover-color">
-                   <a href="{{ route('register') }}" class="btn-a">Cadastrar</a> 
+               <button class="btn-filled-dark">
+                   <a href="{{ route('register') }}" class="btn-outline-dark btn-hover-color">Cadastrar</a> 
                 </button>
                 @endif
                 @endauth
@@ -112,8 +112,8 @@
             <h2>Sobre</h2>
             <p>A solução proposta é a implementação de um sistema de controle de acesso baseado em tecnologia. Este sistema utilizará cartões de acesso eletrônicos e um software de gestão que permitirá o controle centralizado das entradas e saídas do laboratório. Os usuários autorizados terão cartões que lhes permitirão acessar o laboratório durante os horários estipulados, enquanto um registro detalhado de todas as atividades será mantido para fins de segurança e auditoria.</p>
             <div class="btn-group">
-                <button class="btn-outline-dark btn-hover-color">
-  <a href="https://github.com/seu-usuario" target="_blank" class="btn-outline-dark btn-hover-color">GitHub</a>
+                <button class="btn-filled-dark">
+  <a href="https://github.com/LukeVanHagen/Projeto3IF" target="_blank" class="btn-outline-dark btn-hover-color">GitHub</a>
             </div>
             </button>
             </div>

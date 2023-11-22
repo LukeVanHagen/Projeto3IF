@@ -32,19 +32,21 @@
 
         input[type="text"] {
             margin: 40px;
-            width: 220px;
-            padding: 15px;
-            border: 2px solid #000000;
+            width: 280px;
+            padding: 8px;
+            border: 2px solid #6133ac;
             border-radius: 5px;
         }
 
+
         input[type="submit"] {
+            padding: 10px;
             background-color: #6133ac;
-            color: #ffffff;
-            padding: 10px 20px;
-            border: 2px #000000 solid;
-            border-radius: 5px;
+            color: #fff;
+            border: none;
+            border-radius: 30px;
             cursor: pointer;
+            width: 100%;
         }
 
         input[type="submit"]:hover {
@@ -53,8 +55,16 @@
 
         .title {
             font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-            color: #ffffff;
+            color: #141313;
             font-size: 40px;
+        }
+
+        .card {
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            border-radius: 8px;
+            width: 300px;
         }
     </style>
 </head>
@@ -63,10 +73,12 @@
     <h1>CEEP</h1>
 </div>
 
+<div class="card">
 <form action="https://seu-site-laravel.com/rota-do-laravel" method="POST">
     <input type="text" name="campo1" placeholder="Aproxime sua Chave Identificadora" autofocus>
     <input type="submit" value="Enviar">
 </form>
+</div>
 
 </body>
 </html>

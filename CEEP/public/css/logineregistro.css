@@ -45,7 +45,7 @@ body {
 /* Start Login Style */
 .login {
     float: left;
-    background-image: linear-gradient(135deg, #23212f 5%, #9526a9 95%);
+    background-color: #6133ac;
     color: #fff;
     padding: 100px 20px;
     border-radius: 16px 0 0 16px;
@@ -65,6 +65,7 @@ body {
     margin-bottom: 30px;
     border: none;
     background-color: #eeeeef;
+    color: #000;
 }
 
 .login input[type="checkbox"] {
@@ -150,7 +151,7 @@ body {
 /* Start Register Style */
 .register {
     float: right;
-    background-image: linear-gradient(135deg, #23212f 5%, #9526a9 95%);
+    background-color:#6133ac;
     color: #fff;
     padding: 100px 20px;
     border-radius: 0 16px 16px 0;

@@ -67,25 +67,56 @@ button:hover {
 }
 
   </style>
-  <title>Seu Formulário</title>
+<title>Seu Formulário</title>
 </head>
 <body>
-    <div class="title">
-        <h1>CEEP</h1>
-    </div>
+  <div class="title">
+    <h1>CEEP</h1>
+  </div>
 
   <div class="card">
-    <form action="http://127.0.0.1:8000/api/form-data" method="POST">
-      @csrf
+    <form id="form">
       <label for="user_id">ID do Usuário:</label>
-      <input type="text" name="user_id" required>
+      <input type="text" id="user_id" name="user_id" required>
 
       <label for="card_data">Dados do Cartão:</label>
-      <input type="text" name="card_data" required>
+      <input type="text" id="card_data" name="card_data" required>
 
-      <button type="submit">Enviar</button>
+      <button type="button" onclick="enviarFormulario()">Enviar</button>
     </form>
   </div>
+
+  <script>
+    function enviarFormulario() {
+      
+      const user_id = document.getElementById('user_id').value;
+      const card_data = document.getElementById('card_data').value;
+      const form = document.getElementById('form');
+      form.submit();
+
+      fetch('http://127.0.0.1:8000/api/form-data', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ user_id, card_data })
+      })
+      .then(response => {
+        if (response.ok) {
+          console.log('Dados enviados com sucesso!');
+          // Faça aqui qualquer ação adicional após o envio bem-sucedido
+        } else {
+          console.error('Erro ao enviar os dados.');
+        }
+      })
+      .catch(error => {
+        console.error('Erro ao enviar os dados:', error);
+      });
+    }
+    
+    
+
+  </script>
 </body>
 </html>
 

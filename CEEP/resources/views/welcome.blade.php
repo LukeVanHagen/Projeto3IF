@@ -42,12 +42,12 @@
              <a href="{{ url('/dashboard') }}" class="btn-a">DashBoard</a>
             </button>
             @else
-            <button class="btn-filled-dark" href="{{ route('login') }}">
-                <a  class="btn-hover-color">Entrar</a>
+            <button class="btn-filled-dark" >
+                <a href="{{ route('login') }}" class="btn-hover-color">Entrar</a>
             </button>
                @if (Route::has('register'))
-               <button class="btn-filled-dark" href="{{ route('register') }}">
-                   <a  class=" btn-hover-color">Cadastrar</a> 
+               <button class="btn-filled-dark" >
+                   <a href="{{ route('register') }}" class=" btn-hover-color">Cadastrar</a> 
                 </button>
                 @endif
                 @endauth

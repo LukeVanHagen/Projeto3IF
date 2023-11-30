@@ -196,6 +196,14 @@ button {
 	cursor: pointer;
 }
 
+.btn-hover-color {
+	color: #fff;
+}
+
+.btn-hover-color:hover {
+	color: #6133ac;
+}
+
 /* esse é o vazado*/
 button.btn-outline {
 	color: #f9f9f9;
@@ -244,6 +252,7 @@ button:hover,
 	transition: all 0.2s ease;
 	box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.15);
 }
+
 
 .btn-group {
 	display: flex;

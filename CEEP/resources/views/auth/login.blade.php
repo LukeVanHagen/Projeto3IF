@@ -2,6 +2,7 @@
     <div class="register-popUp">
             
     <div class="card">
+        
       <div class="login">
         <h1>Login</h1>
         <form method="POST" action="{{ route('login') }}">
@@ -43,7 +44,9 @@
                 </div>
             </form>
             </form>
+            
     </div>
+    <h1 class="titulo">CEEP</h1>
 </div>
         
        

@@ -177,6 +177,8 @@ body {
     font-size: 18px;
     margin-bottom: 30px;
     color: #fff;
+    margin-left: 18px;
+    text-align: start;
     
 }
 
@@ -200,5 +202,12 @@ body {
 .label {
     text-align: left;
     margin-left: 10px;
+}
+
+.titulo {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 90px;
+    color: #141313;
+    margin-left: 160px;
 }
 

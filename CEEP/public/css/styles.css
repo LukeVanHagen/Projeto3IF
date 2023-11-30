@@ -37,7 +37,6 @@ flex-direction: row;
 align-items: center;
 justify-content: space-between;
 padding: 0 var(--pg-margin);
-border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 z-index: 100;
 }
 
@@ -97,24 +96,27 @@ grid-gap: 16px;
 
 section.hero {
 	/*    width: 100%;*/
-	height: auto;
-	background: #50117F;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: flex-start;
-	grid-gap: 48px;
-	display: inline-flex;
+	
+	background: #6133ac;;
+	padding: 0 1em;
+	margin: 0;
 }
 
-section.hero h1 {
+.titulo_home {
 	font-size: 40px;
-	font-weight: 600;
+	font-weight: normal;
 	line-height: 1.2;
-	width: 40%;
-    padding-left: 20px; 
-	color: white
+	color: white;
+	margin: 0;
 }
+
+.subtitu_home {
+	margin: 1.2rem 0;
+	font-size: 15px;
+	color: #ffffff;
+}
+
+
 
 .btn-a {
     text-decoration: none;
@@ -143,127 +145,40 @@ section h2 {
 
 /*seccion 2*/
 
-.shop-pets {
-		display: flex;
-		flex-direction: column;
-		grid-gap: 24px;
-		width: 100%;
-	}
-
-.card-large {
-	flex: 1;
-	position: relative;
+.sec-card {
 	display: flex;
-	flex-direction: column;
-	transition: all 0.2s ease;
-	cursor: pointer;
-	max-width: 420px; /* eu to editando*/
-	max-width: 400px; /* Ajuste a largura conforme necessário */
-	height: 240px; /* Ajuste a altura conforme necessário */
+	justify-content: space-around;
+	margin: 0;
+	padding: 0;
+}
+
+.card-cont {
+	width: 300px;
+	height: 350px;
 	padding: 10px;
-}
-
-.card-large {
-	box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
-	border-radius: 12px;
-	overflow: hidden;
+	margin: 10px;
+	text-align: center;
+	border-radius: 10px;
+	background-color: rgb(255, 255, 255);
+	box-shadow:  0px 4px 8px rgba(0, 0, 0, 0.2);
+	transition: transform 0.3s ease;
 	
-	
+}
+.card-cont:hover{
+	transform: scale(1.1);
 }
 
-.card-large:hover {
-	box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.15);
-	transform: scale(1.01);
+.p-titu {
+	margin: 20px;
+	font-size: 20px;
 }
 
-.card-large a {
-	text-decoration: none;
-	font-weight: 600;
+.p-info {
+	margin: 20px;
+	text-align: justify;
 }
 
-.card-large > a {
-	position: absolute;
-	bottom: 0;
-	z-index: 1;
-	width: 100%;
-	font-size: 24px;
-	line-height: 1.2;
-}
-.card-large.card-light {
-	margin-left: auto;
-  }
 
-  .card-large.card-light {
-	margin-left: 35px; /* Adicione o valor desejado para a margem esquerda */
-  }
-
-  
-.card-large > ul {
-	
-	display: flex;
-	flex-direction: column;
-	grid-gap: 8px;
-	flex: 1;
-	color: #45413e;
-	padding: 0 40px;
-	font-size: 28px;
-	font-weight: 600;
-	line-height: 1;
-
-    
-}
-
-.card-large > ul > li a {
-	line-height: 32px;
-	font-size: 16px;
-
-}
-  
-  
-li {
-    list-style: none;
-}
-
-/*Cores dos cards */
-
-/*Primeiro card */
-.card-large#sup-dog,
-.card-med#sup-dog   {
-	background: #51BAF2;
-}
-
- /* Segundo card*/
- .card-large#sup-cat,
- .card-med#sup-cat  {
-     background: #A284E8;
- }
-
- /* o ultimo card */
-.card-large#sup-fish,
-.card-med#sup-fish  {
-	background: #399DAB;
-}
- 
-/*O card 3 ta em branco*/
-
-.card-large.card-dark a,
-.card-large.card-dark > ul {
-	color: #45413e;
-}
-
-.card-large.card-light a,
-.card-large.card-light > ul {
-	color: white;
-}
-
-.card-large > ul > li:last-of-type {
-	margin-bottom: 40px;
-}
-
-.card-large button {
-	margin-top: auto;
-
-}
 
 /* Butoes */
 
@@ -304,9 +219,8 @@ button.btn-outline-dark {
 /*Esse é o preenchido*/
 button.btn-filled-dark {
 	color: #f9f9f9;
-	background: #51BAF2;
-	color: #f9f9f9;
-	border: 2px solid #51BAF2;
+	background-color: transparent;
+    border: 1px solid #fff;
 }
 
 /*Esse é o vazado com o hover*/
@@ -323,9 +237,10 @@ button.btn-filled-dark {
 
 button:hover,
 .btn-outline-dark.btn-hover-color:hover {
-	color: #b42bc0;
-	border: 2px solid #51BAF2;
-	background: #51BAF2;
+	color: #6133ac;
+    background-color: #fff;
+    cursor: pointer;
+	border: 1px solid #fff;
 	transition: all 0.2s ease;
 	box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.15);
 }
@@ -334,6 +249,7 @@ button:hover,
 	display: flex;
 	flex-direction: row;
 	grid-gap: 16px;
+	
   }
   
   .btn-group a {
@@ -343,7 +259,6 @@ button:hover,
   .btn-group a.btn-custom {
 	display: inline-block;
 	padding: 10px 20px;
-	background-color: #0074e4; /* Cor de fundo */
 	color: #ffffff; /* Cor do texto */
 	border: none;
 	border-radius: 5px;
@@ -359,12 +274,12 @@ button:hover,
 /*sobre*/
 
 #locate > div {
-	background: #50117F;
+	background: #6133ac;;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 80px 0;
+	padding: 90px 0;
 	border-radius: 12px;
 	box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.1);
 	transition: all 0.2s ease;

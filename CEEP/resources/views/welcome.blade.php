@@ -33,8 +33,8 @@
   </header>
             
         <section class="hero">
-          <h1>Sejam bem vindos ao CEEP!</h1>
-          <h2>CEEP,Control of Entry and Exit of People.Esse sistema tem a finalinade de controlar a entrada de alunos nos laboratórios do campus IFPE.</h2>
+          <h1 class="titulo_home">Sejam bem vindos ao CEEP!</h1>
+          <p class="subtitu_home">CEEP,Control of Entry and Exit of People.Esse sistema tem a finalinade de controlar a entrada de alunos nos laboratórios do campus IFPE.</p>
           @if (Route::has('login'))
           <div class="btn-group">
             @auth
@@ -42,12 +42,12 @@
              <a href="{{ url('/dashboard') }}" class="btn-a">DashBoard</a>
             </button>
             @else
-            <button class="btn-filled-dark">
-                <a href="{{ route('login') }}" class="btn-outline-dark btn-hover-color">Entrar</a>
+            <button class="btn-filled-dark" href="{{ route('login') }}">
+                <a  class="btn-hover-color">Entrar</a>
             </button>
                @if (Route::has('register'))
-               <button class="btn-filled-dark">
-                   <a href="{{ route('register') }}" class="btn-outline-dark btn-hover-color">Cadastrar</a> 
+               <button class="btn-filled-dark" href="{{ route('register') }}">
+                   <a  class=" btn-hover-color">Cadastrar</a> 
                 </button>
                 @endif
                 @endauth
@@ -58,50 +58,30 @@
         <br>
         <br>
 
-        <section>
-        
+    <section class="sec-card">
+        <div class="card-cont">
+            <p class="p-titu">Proposta</p>
+            <p class="p-info">Os usuários autorizados terão cartões para acesso, enquanto registros detalhados serão mantidos para segurança e auditoria.</p>
+        </div>
+        <div class="card-cont">
+            <p class="p-titu">Tecnologias</p>
+            <p class="p-info">Cartões de acesso RFID/NFC.
+                         Banco de dados SQL.
+                         Aplicativo web de administração.
+                         Sensores de presença para ocupação.</p>
+        </div>
+        <div class="card-cont">
+            <p class="p-titu">Funcionalidades</p>
+            <p class="p-info">Registro de usuários autorizados e horários de acesso.
+                    Monitoramento em tempo real de entradas e saídas.
+                    Alertas de acesso não autorizado.
+                    Relatórios de uso para gestão e auditoria.</p>
+        </div>
+        <div class="card-cont">
+            <p class="p-titu">Outras coisas</p>
+            <p class="p-info">Colocar o estiver faltando.</p>
+        </div>
 
-        <ul class="shop-pets">
-            <li class="card-large card-light" id="sup-dog">
-               
-                <ul>
-                Proposta
-                    <li><a href="#">Os usuários autorizados terão cartões para acesso, enquanto registros detalhados serão mantidos para segurança e auditoria.</a></li>
-
-                    
-
-                </ul>
-
-
-            </li>
-
-            <li class="card-large card-dark" id="sup-cat">
-               
-                <ul>
-                    Tecnologias
-                    <li><a href="#">Cartões de acesso RFID/NFC.
-                         <li><a>Banco de dados SQL.</a></li>
-                         <li><a>Aplicativo web de administração.</a></li>
-                         <li><a>Sensores de presença para ocupação.</a></li>
-                    
-                    
-                </ul>
-
-            </li>
-            <li class="card-large card-light" id="sup-fish">
-               
-                <ul>
-                Funcionalidades
-                    <li><a href="#">Registro de usuários autorizados e horários de acesso.
-                    <li><a>Monitoramento em tempo real de entradas e saídas.</a></li>
-                    <li><a>Alertas de acesso não autorizado.</a></li>
-                    <li><a>Relatórios de uso para gestão e auditoria.</a></li> <!-- ajeitar essa funcionalidade-->
-                    
-                    
-                </ul>
-
-            </li>
-        </ul>
     </section>
     <br>
     <br>
@@ -113,7 +93,7 @@
             <p>A solução proposta é a implementação de um sistema de controle de acesso baseado em tecnologia. Este sistema utilizará cartões de acesso eletrônicos e um software de gestão que permitirá o controle centralizado das entradas e saídas do laboratório. Os usuários autorizados terão cartões que lhes permitirão acessar o laboratório durante os horários estipulados, enquanto um registro detalhado de todas as atividades será mantido para fins de segurança e auditoria.</p>
             <div class="btn-group">
                 <button class="btn-filled-dark">
-  <a href="https://github.com/LukeVanHagen/Projeto3IF" target="_blank" class="btn-outline-dark btn-hover-color">GitHub</a>
+  <a href="https://github.com/LukeVanHagen/Projeto3IF" target="_blank" class=" btn-hover-color">GitHub</a>
             </div>
             </button>
             </div>

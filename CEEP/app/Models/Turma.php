@@ -12,9 +12,7 @@ class Turma extends Model
     protected $fillable = [
         'nome',
         
-    ]; // Ou qualquer outro campo que você queira permitir o preenchimento em massa
-
-    // Defina o relacionamento inverso para acessar os alunos de uma turma
+    ]; 
     public function alunos()
     {
         return $this->hasMany(Aluno::class, 'turma_id');

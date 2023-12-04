@@ -18,6 +18,9 @@
                     <x-nav-link :href="route('local.create')" :active="request()->routeIs('local.create')">
                         {{ __('Criar Local') }}
                     </x-nav-link>
+                    <x-nav-link :href="route('turma.create')" :active="request()->routeIs('turma.create')">
+                        {{ __('Criar Turma') }}
+                    </x-nav-link>
                 </div>
             </div>
 

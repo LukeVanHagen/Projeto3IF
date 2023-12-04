@@ -47,10 +47,8 @@ Route::resource('alunos', AlunoController::class);
 
 Route::post('/api/processar-rfid', [RFIDController::class, 'processarRFID'])->withoutMiddleware(['web', 'csrf']);
 
-//Alunos
 
-Route::get('/alunos/create', [AlunoController::class, 'create'])->name('alunos.create');
-Route::post('/alunos', [AlunoController::class, 'store'])->name('alunos.store');
+
 
 Route::get('/registros', [RegistroController::class, 'index'])->name('registros.index');
 Route::post('/registros/store', [RegistroController::class, 'store'])->name('registros.store');
@@ -70,6 +68,14 @@ Route::post('/turma', [TurmaController::class, 'store'])->name('turma.store');
 Route::get('/turma/{turma}/edit', [TurmaController::class, 'edit'])->name('turma.edit');
 Route::put('/turma/{turma}', [TurmaController::class, 'update'])->name('turma.update');
 Route::delete('/turma/{turma}', [turmaController::class, 'destroy'])->name('turma.destroy');
+
+//Alunos
+
+Route::get('/aluno/create', [alunoController::class, 'create'])->name('aluno.create');
+Route::post('/aluno', [alunoController::class, 'store'])->name('aluno.store');
+Route::get('/aluno/{aluno}/edit', [alunoController::class, 'edit'])->name('aluno.edit');
+Route::put('/aluno/{aluno}', [alunoController::class, 'update'])->name('aluno.update');
+Route::delete('/aluno/{aluno}', [alunoController::class, 'destroy'])->name('aluno.destroy');
 
 
 

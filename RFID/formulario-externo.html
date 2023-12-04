@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário RFID</title>
+</head>
+<body>
+    <form id="rfidForm">
+        <label for="rfid">RFID:</label>
+        <input type="text" id="rfid" name="rfid" required>
+
+        <button type="button" onclick="enviarRFID()">Enviar RFID</button>
+    </form>
+
+    <script>
+        function enviarRFID() {
+            var form = document.getElementById('rfidForm');
+            var formData = new FormData(form);
+            formData.append('rfid', valorDoRFID)
+            fetch('http://127.0.0.1:8000/api/processar-rfid', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            // No bloco .then(data => { ... }), adicione uma verificação para o status
+.then(data => {
+    try {
+        const jsonData = JSON.parse(data);
+        console.log(jsonData);
+    } catch (error) {
+        console.error('Erro na análise JSON:', error);
+        console.log('Resposta do servidor:', data);
+
+        // Verifique se a variável response está definida
+        if (data.includes('Aluno não encontrado')) {
+            console.log('Aluno não encontrado');
+        }
+    }
+})
+
+            .catch(error => console.error('Erro:', error));
+        }
+    </script>
+</body>
+</html>

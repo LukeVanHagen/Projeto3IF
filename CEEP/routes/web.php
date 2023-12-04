@@ -41,7 +41,6 @@ Route::middleware(['auth'])->group(function () {
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
 Route::resource('alunos', AlunoController::class)->only(['create', 'store']);
-// web.php ou routes/web.php
 
 Route::resource('alunos', AlunoController::class);
 
@@ -53,7 +52,13 @@ Route::post('/alunos', [AlunoController::class, 'store'])->name('alunos.store');
 Route::get('/registros', [RegistroController::class, 'index'])->name('registros.index');
 Route::post('/registros/store', [RegistroController::class, 'store'])->name('registros.store');
 
+// local
+
 Route::get('/local/create', [LocalController::class, 'create'])->name('local.create');
 Route::post('/local', [LocalController::class, 'store'])->name('local.store');
+Route::get('/local/{local}/edit', [LocalController::class, 'edit'])->name('local.edit');
+Route::put('/local/{local}', [LocalController::class, 'update'])->name('local.update');
+Route::delete('/local/{local}', [LocalController::class, 'destroy'])->name('local.destroy');
+
 
 require __DIR__.'/auth.php';

@@ -26,8 +26,7 @@ class RFIDController extends Controller
         if ($aluno) {
             // Se o aluno existir, armazenar informações na tabela de registros
             Registro::create([
-                'nome' => $aluno->nome,
-                'turma' => $aluno->turma->nome,
+                'rfid' => $aluno->rfid,
                 'horario' => now(), // Você pode ajustar conforme necessário
             ]);
 

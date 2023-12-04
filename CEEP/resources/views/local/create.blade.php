@@ -42,16 +42,33 @@
             </form>
         </div>
     </div>
+
     <br>
+
     @foreach($locais as $local)
-    <div class="card">
-        <div class="card-header  bg-violet-200">{{ $local->nome }}</div>
-        <div class="card-body">
-            <p>Endereço MAC: {{ $local->aparelho_mac }}</p>
-            <!-- Outras informações do local -->
+        <div class="card">
+            <div class="card-header  bg-violet-200">{{ $local->nome }}</div>
+            <div class="card-body">
+                <p>Endereço MAC: {{ $local->aparelho_mac }}</p>
+                <!-- Outras informações do local -->
+
+                <!-- Botões de Editar e Excluir -->
+                <div class="d-flex justify-content-end">
+                    <a href="{{ route('local.edit', ['local' => $local->id]) }}" class="btn btn-warning mx-2">
+                        <i class="fa fa-pencil"></i> Editar
+                    </a>
+
+                    <form action="{{ route('local.destroy', ['local' => $local->id]) }}" method="POST">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" class="btn btn-danger">
+                            <i class="fa fa-trash"></i> Excluir
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
-    </div>
-    <br>
-@endforeach
+        <br>
+    @endforeach
 </div>
 @endsection

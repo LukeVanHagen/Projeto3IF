@@ -10,6 +10,9 @@
         <label for="rfid">RFID:</label>
         <input type="text" id="rfid" name="rfid" required>
 
+        <!-- Campo oculto para o ID do local -->
+        <input type="hidden" id="localId" name="localId" value="1">
+
         <button type="button" onclick="enviarRFID()">Enviar RFID</button>
     </form>
 
@@ -17,29 +20,31 @@
         function enviarRFID() {
             var form = document.getElementById('rfidForm');
             var formData = new FormData(form);
-            formData.append('rfid', valorDoRFID)
+            var valorDoRFID = document.getElementById('rfid').value;
+
+            // Atualiza o valor do campo oculto com o ID do local
+            var localId = 2; // Substitua pelo valor desejado
+            document.getElementById('localId').value = localId;
+
             fetch('http://127.0.0.1:8000/api/processar-rfid', {
                 method: 'POST',
                 body: formData
             })
-            .then(response => response.text())
-            // No bloco .then(data => { ... }), adicione uma verificação para o status
-.then(data => {
-    try {
-        const jsonData = JSON.parse(data);
-        console.log(jsonData);
-    } catch (error) {
-        console.error('Erro na análise JSON:', error);
-        console.log('Resposta do servidor:', data);
-
-        // Verifique se a variável response está definida
-        if (data.includes('Aluno não encontrado')) {
-            console.log('Aluno não encontrado');
-        }
-    }
-})
-
-            .catch(error => console.error('Erro:', error));
+            .then(response => {
+                if (response.ok) {
+                    return response.json();
+                } else {
+                    throw new Error('Usuário não autorizado');
+                }
+            })
+            .then(data => {
+                console.log(data);
+                alert(data.message); // Exibe a mensagem de autorização
+            })
+            .catch(error => {
+                console.error('Erro:', error);
+                alert('Usuário não autorizado'); // Exibe a mensagem de usuário não autorizado
+            });
         }
     </script>
 </body>

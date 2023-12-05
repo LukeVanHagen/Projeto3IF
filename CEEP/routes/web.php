@@ -34,24 +34,6 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::middleware(['auth'])->group(function () {
-    Route::get('/alunos/create', [AlunoController::class, 'create'])->name('alunos.create');
-});
-
-// routes/web.php
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-
-Route::resource('alunos', AlunoController::class)->only(['create', 'store']);
-
-Route::resource('alunos', AlunoController::class);
-
-Route::post('/api/processar-rfid', [RFIDController::class, 'processarRFID'])->withoutMiddleware(['web', 'csrf']);
-
-
-
-
-Route::get('/registros', [RegistroController::class, 'index'])->name('registros.index');
-Route::post('/registros/store', [RegistroController::class, 'store'])->name('registros.store');
 
 // Local
 

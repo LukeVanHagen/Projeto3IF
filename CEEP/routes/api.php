@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\FormDataController;
+use App\Http\Controllers\RFIDController;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,5 +20,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 
-Route::post('/form-data', [FormDataController::class, 'store']);
-Route::get('/form-data', [FormDataController::class, 'index']);
+
+Route::post('/processar-rfid', [RFIDController::class, 'processarRFID'])->name('processar.rfid');
+
+

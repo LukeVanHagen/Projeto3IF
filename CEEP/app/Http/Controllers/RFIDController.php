@@ -1,43 +1,54 @@
 <?php
 
-// RFIDController.php
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Aluno;
+use App\Models\User;
 use App\Models\Registro;
 
 class RFIDController extends Controller
 {
     public function processarRFID(Request $request)
     {
-        error_log('Método processarRFID chamado.');
-        error_log('Dados recebidos do formulário externo: ' . print_r($request->all(), true));
         $rfid = $request->input('rfid');
-
-        $request->validate([
-            'rfid' => 'required|string',
-        ]);
-
-        // Verificar se o aluno com o RFID existe
-        $aluno = Aluno::where('rfid', $request->rfid)->first();
-
+        $localId = $request->input('localId'); // Adicionando a obtenção do ID do local
+    
+        info("RFID recebido: $rfid");
+    
+        // Verificar se o RFID corresponde a um aluno
+        $aluno = Aluno::where('rfid', $rfid)->first();
+    
+        info("Aluno encontrado: " . json_encode($aluno));
+    
         if ($aluno) {
-            // Se o aluno existir, armazenar informações na tabela de registros
-            Registro::create([
-                'rfid' => $aluno->rfid,
-                'horario' => now(), // Você pode ajustar conforme necessário
-            ]);
-
-            // Obter todos os registros (pode ajustar conforme necessário)
-            $registros = Registro::all();
-
-            // Responder ao script externo com os registros
-            return response()->json(['status' => 'success', 'registros' => $registros]);
+            // Aluno autorizado
+            $this->registrarAcesso($rfid, $localId);
+            return response()->json(['message' => "Aluno {$aluno->nome} autorizado"]);
         }
-
-        // Se o aluno não existir, responder ao script externo
-        return response()->json(['status' => 'Aluno não encontrado'], 404);
+    
+        // Se não for aluno, verifique se é um usuário
+        $user = User::where('rfid', $rfid)->first();
+    
+        info("Usuário encontrado: " . json_encode($user));
+    
+        if ($user) {
+            // Usuário autorizado
+            $this->registrarAcesso($rfid, $localId);
+            return response()->json(['message' => "Usuário {$user->name} autorizado"]);
+        }
+    
+        // RFID não encontrado
+        return response()->json(['message' => 'Usuário não autorizado'], 403);
+    }
+    
+    private function registrarAcesso($rfid, $localId)
+    {
+        // Registre o acesso na tabela de registros
+        Registro::create([
+            'rfid' => $rfid,
+            'data_hora' => now(),
+            'local_id' => $localId,
+        ]);
     }
 }

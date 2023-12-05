@@ -5,7 +5,6 @@
     <div class="card">
         <div class="card-header bg-violet-600 text-white">
             <h1 class="mb-0">Criar Local</h1>
-            <a href="{{ route('alunos.create') }}">Cadastrar Aluno</a>
         </div>
         <div class="card-body">
             @if(session('success'))

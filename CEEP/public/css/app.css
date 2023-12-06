@@ -13,3 +13,75 @@
 	transition: 0.5s;
 	border: 2px solid #646464;
 }
+
+/*cards de locais*/
+
+.card-card {
+	width: 20%;
+	height: 200px;
+	border: 1px solid #ccc;
+	border-radius: 15px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	box-sizing: border-box;
+	position: relative;
+}
+
+.card-conteiner {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: start;
+	
+}
+
+.card-heder {
+	background-color:#6133ac;
+	padding: 15px;
+	border-radius: 15px 15px 0 0;
+	color: white;
+}
+
+.card-bodi {
+	padding: 15px;
+}
+
+.card-foter {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 10px;
+	justify-content: center;
+	display: flex;
+}
+
+.foter-img {
+	width: 35px;
+	height: 35px;
+	margin: 5px;
+}
+
+/*botão de adicionar*/
+
+.button-add {
+    
+    background-color: #6133ac;
+    border: 1px solid #6133ac;
+    border-radius: 30px;
+    padding: 10px 20px;
+    color: #fff;
+    font-size: 20px;
+    text-transform: uppercase;
+    transition: 0.2s all ease-in-out;
+}
+
+.button-add:hover {
+    
+    color: #6133ac;
+    background-color: #ffff;
+    cursor: pointer;
+}
+
+select {
+	border-radius: 20px;
+}

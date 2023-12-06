@@ -3,9 +3,8 @@
 @section('content')
 <div class="container mt-5">
     <div class="card">
-        <div class="card-header bg-violet-600 text-white">
+        <div class="card-header bg-violet-800 text-white">
             <h1 class="mb-0">Cadastrar Aluno</h1>
-            <a href="{{ route('alunos.create') }}">Criar Aluno</a>
         </div>
         <div class="card-body">
             @if(session('success'))
@@ -47,44 +46,44 @@
                 </div>
 
                 <div class="text-end">
-                    <x-primary-button type="submit" class="btn btn-primary">Salvar</x-primary-button>
+                    <button  class="button-add">Salvar</button>
                 </div>
             </form>
-
-            <hr>
-
-            <h2>Alunos Cadastrados</h2>
+        </div>
+    </div>
+            <br>
+        <div class="card-conteiner">  
 
             @if ($alunos->isEmpty())
                 <p>Nenhum aluno cadastrado ainda.</p>
             @else
                 @foreach($alunos as $aluno)
-                    <div class="card">
-                        <div class="card-header bg-violet-200">{{ $aluno->nome }}</div>
-                        <div class="card-body">
+                    <div class="card-card">
+                        <div class="card-heder">{{ $aluno->nome }}</div>
+                          <div class="card-bodi">
                             <p>RFID: {{ $aluno->rfid }}</p>
                             <p>Turma: {{ $aluno->turma->nome }}</p>
-                            
+                          </div>
                             <!-- Botões de Editar e Excluir -->
-                            <div class="d-flex justify-content-end">
-                                <a href="{{ route('aluno.edit', ['aluno' => $aluno->id]) }}" class="btn btn-warning mx-2">
-                                    <i class="fa fa-pencil"></i> Editar
+                            <div class="card-foter">
+                                <a href="{{ route('aluno.edit', ['aluno' => $aluno->id]) }}">
+                                    <img src="{{ asset('img/editar.png') }}" alt="Editar" class="foter-img">
                                 </a>
         
                                 <form action="{{ route('aluno.destroy', ['aluno' => $aluno->id]) }}" method="POST">
                                     @csrf
                                     @method('DELETE')
-                                    <button type="submit" class="btn btn-danger">
-                                        <i class="fa fa-trash"></i> Excluir
+                                    <button type="submit">
+                                        <img src="{{ asset('img/excluir.png') }}" alt="Excluir" class="foter-img">
                                     </button>
                                 </form>
                             </div>
-                        </div>
+                        
                     </div>
                     <br>
                 @endforeach
             @endif
-        </div>
-    </div>
+        
+        </div> 
 </div>
 @endsection

@@ -3,7 +3,7 @@
 @section('content')
 <div class="container mt-5">
     <div class="card">
-        <div class="card-header bg-violet-600 text-white">
+        <div class="card-header bg-violet-800 text-white">
             <h1 class="mb-0">Criar Local</h1>
         </div>
         <div class="card-body">
@@ -36,38 +36,41 @@
                 </div>
 
                 <div class="text-end">
-                    <x-primary-button type="submit" class="btn btn-primary">Salvar</x-primary-button>
+                    <button  class="button-add">Salvar</button>
                 </div>
             </form>
         </div>
     </div>
 
     <br>
+    <div class="card-conteiner">
+        @foreach($locais as $local)
+        
+            <div class="card-card">
+                <div class="card-heder">{{ $local->nome }}</div>
+                    <div class="card-bodi">
+                      <p>Endereço MAC: {{ $local->aparelho_mac }}</p>
+                      <!-- Outras informações do local -->
+                    </div>
+                      <!-- Botões de Editar e Excluir -->
+                    <div class="card-foter">
+                      <a href="{{ route('local.edit', ['local' => $local->id]) }}" >
+                        <img src="{{ asset('img/editar.png') }}" alt="Editar" class="foter-img">
+                      </a>
 
-    @foreach($locais as $local)
-        <div class="card">
-            <div class="card-header  bg-violet-200">{{ $local->nome }}</div>
-            <div class="card-body">
-                <p>Endereço MAC: {{ $local->aparelho_mac }}</p>
-                <!-- Outras informações do local -->
-
-                <!-- Botões de Editar e Excluir -->
-                <div class="d-flex justify-content-end">
-                    <a href="{{ route('local.edit', ['local' => $local->id]) }}" class="btn btn-warning mx-2">
-                        <i class="fa fa-pencil"></i> Editar
-                    </a>
-
-                    <form action="{{ route('local.destroy', ['local' => $local->id]) }}" method="POST">
+                      <form action="{{ route('local.destroy', ['local' => $local->id]) }}" method="POST">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-danger">
-                            <i class="fa fa-trash"></i> Excluir
+                        <button type="submit" >
+                            <img src="{{ asset('img/excluir.png') }}" alt="" class="foter-img">
                         </button>
-                    </form>
-                </div>
+                     </form>
+                    </div>
+                
             </div>
-        </div>
-        <br>
-    @endforeach
+            
+        
+        @endforeach
+    </div>
 </div>
 @endsection

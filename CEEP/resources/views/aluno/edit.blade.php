@@ -3,9 +3,8 @@
 @section('content')
 <div class="container mt-5">
     <div class="card">
-        <div class="card-header bg-violet-600 text-white">
+        <div class="card-header bg-violet-800 text-white">
             <h1 class="mb-0">Editar Aluno</h1>
-            <a href="{{ route('alunos.create') }}">Cadastrar Aluno</a>
         </div>
         <div class="card-body">
             @if(session('success'))
@@ -51,7 +50,7 @@
                 </div>
 
                 <div class="text-end">
-                    <x-primary-button type="submit" class="btn btn-primary">Atualizar</x-primary-button>
+                    <button class="button-add">Atualizar</button>
                 </div>
             </form>
         </div>

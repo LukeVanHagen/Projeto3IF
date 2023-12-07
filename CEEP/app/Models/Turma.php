@@ -17,4 +17,13 @@ class Turma extends Model
     {
         return $this->hasMany(Aluno::class, 'turma_id');
     }
+    public function horarios()
+    {
+        return $this->hasMany(Horario::class);
+    }
+    public function hasHorario($dia, $periodo)
+    {
+        return $this->horarios()->where('dia', $dia)->where('periodo', $periodo)->exists();
+    }
+
 }

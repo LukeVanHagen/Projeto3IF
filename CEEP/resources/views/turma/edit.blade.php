@@ -32,6 +32,47 @@
                     <x-text-input type="text" name="nome" id="nome" class="form-control" value="{{ old('nome', $turma->nome) }}"/>
                 </div>
 
+                <div class="mb-3">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th></th> <!-- Célula vazia para alinhar com os checkboxes -->
+                                @foreach(['Segunda', 'Terça', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo'] as $dia)
+                                    <th>{{ ucfirst($dia) }}</th>
+                                @endforeach
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Manhã</td>
+                                @foreach(['manha'] as $periodo)
+                                    @foreach(['Segunda', 'Terca', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo'] as $dia)
+                                        <td>
+                                            <div class="form-check d-inline-block">
+                                                <input type="checkbox" name="horarios[{{ $periodo }}][{{ $dia }}]" class="form-check-input" id="{{ $periodo }}-{{ $dia }}" {{ $turma->hasHorario($dia, $periodo) ? 'checked' : '' }}>
+                                            </div>
+                                        </td>
+                                    @endforeach
+                                @endforeach
+                            </tr>
+                            <tr>
+                                <td>Tarde</td>
+                                @foreach(['tarde'] as $periodo)
+                                    @foreach(['Segunda', 'Terca', 'Quarta', 'Quinta', 'Sexta', 'Sábado', 'Domingo'] as $dia)
+                                        <td>
+                                            <div class="form-check d-inline-block">
+                                                <input type="checkbox" name="horarios[{{ $periodo }}][{{ $dia }}]" class="form-check-input" id="{{ $periodo }}-{{ $dia }}" {{ $turma->hasHorario($dia, $periodo) ? 'checked' : '' }}>
+                                            </div>
+                                        </td>
+                                    @endforeach
+                                @endforeach
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <!-- Adicionar para os outros dias e horários -->
+
                 <div class="text-end">
                     <button class="button-add" >Atualizar</button>
                 </div>

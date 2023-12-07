@@ -3,7 +3,7 @@
 @section('content')
 <div class="container mt-5">
     <div class="card">
-        <div class="card-header bg-violet-600 text-white">
+        <div class="card-header bg-violet-800 text-white">
             <h1 class="mb-0">Criar turma</h1>
         </div>
         <div class="card-body">
@@ -31,36 +31,38 @@
                 </div>
 
                 <div class="text-end">
-                    <x-primary-button type="submit" class="btn btn-primary">Salvar</x-primary-button>
+                    <button  class="button-add">Salvar</button>
                 </div>
             </form>
         </div>
     </div>
 
     <br>
-
+    <div class="card-conteiner">
     @foreach($turmas as $turma)
-        <div class="card">
-            <div class="card-header  bg-violet-200">{{ $turma->nome }}</div>
-            <div class="card-body">
-
+        <div class="card-card">
+            <div class="card-heder text-center">{{ $turma->nome }}</div>
+                <div class="card-bodi">
+                    <!-- Adicionar descrição da turma se quiser-->
+                </div>
                 <!-- Botões de Editar e Excluir -->
-                <div class="d-flex justify-content-end">
-                    <a href="{{ route('turma.edit', ['turma' => $turma->id]) }}" class="btn btn-warning mx-2">
-                        <i class="fa fa-pencil"></i> Editar
+                <div class="card-foter">
+                    <a href="{{ route('turma.edit', ['turma' => $turma->id]) }}">
+                        <img src="{{ asset('img/editar.png') }}" alt="Editar" class="foter-img">
                     </a>
 
                     <form action="{{ route('turma.destroy', ['turma' => $turma->id]) }}" method="POST">
                         @csrf
                         @method('DELETE')
-                        <button type="submit" class="btn btn-danger">
-                            <i class="fa fa-trash"></i> Excluir
+                        <button type="submit">
+                            <img src="{{ asset('img/excluir.png') }}" alt="Excluir" class="foter-img">
                         </button>
                     </form>
+                
                 </div>
-            </div>
         </div>
         <br>
     @endforeach
+    </div>
 </div>
 @endsection

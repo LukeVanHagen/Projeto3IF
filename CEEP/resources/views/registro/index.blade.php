@@ -7,23 +7,36 @@
             <h1 class="mb-0">Lista de Registros</h1>
         </div>
         <div class="card-body">
-            <ul class="list-group">
-                @forelse($dadosFormatados as $registro)
-                    <li class="list-group-item">
-                        <div class="d-flex justify-content-between">
-                            <div>
-                                <h5 class="mb-0">{{ $registro['nome'] }}</h5>
-                                <p class="mb-0">Tipo: {{ $registro['tipo'] }}</p>
-                                <p class="mb-0">Turma: {{ $registro['turma']->nome ?? 'N/A' }}</p>
-                                <p class="mb-0">Local: {{ $registro['local'] }}</p>
-                                <p class="mb-0">Data/Hora: {{ $registro['dia_hora'] }}</p>
-                            </div>
-                        </div>
-                    </li>
-                @empty
-                    <li class="list-group-item">Nenhum registro encontrado.</li>
-                @endforelse
-            </ul>
+            @if(count($dadosFormatados) > 0)
+                <div class="table-responsive">
+                    <table class="table table-bordered table-striped table-hover">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th scope="col">Nome</th>
+                                <th scope="col">Tipo</th>
+                                <th scope="col">Turma</th>
+                                <th scope="col">Local</th>
+                                <th scope="col">Data/Hora</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach($dadosFormatados as $registro)
+                                <tr>
+                                    <td>{{ $registro['nome'] }}</td>
+                                    <td>{{ $registro['tipo'] }}</td>
+                                    <td>{{ $registro['turma']->nome ?? 'N/A' }}</td>
+                                    <td>{{ $registro['local'] }}</td>
+                                    <td>{{ $registro['dia_hora'] }}</td>
+                                </tr>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
+            @else
+                <div class="alert alert-warning" role="alert">
+                    Nenhum registro encontrado.
+                </div>
+            @endif
         </div>
     </div>
 </div>

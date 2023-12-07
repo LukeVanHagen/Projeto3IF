@@ -2,12 +2,9 @@
 
 use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
 use App\Http\Controllers\RegistroController;
 use App\Http\Controllers\LocalController;
 use App\Http\Controllers\AlunoController;
-use App\Http\Controllers\RFIDController;
-use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\TurmaController;
 /*
 |--------------------------------------------------------------------------
@@ -58,6 +55,11 @@ Route::post('/aluno', [alunoController::class, 'store'])->name('aluno.store');
 Route::get('/aluno/{aluno}/edit', [alunoController::class, 'edit'])->name('aluno.edit');
 Route::put('/aluno/{aluno}', [alunoController::class, 'update'])->name('aluno.update');
 Route::delete('/aluno/{aluno}', [alunoController::class, 'destroy'])->name('aluno.destroy');
+
+//Registros
+
+Route::get('/registros', [RegistroController::class, 'index'])->name('registros.index');
+
 
 
 

@@ -1,5 +1,4 @@
 <?php
-
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -14,6 +13,7 @@ class CreateRegistrosTable extends Migration
             $table->dateTime('data_hora');
             $table->unsignedBigInteger('local_id');
             $table->foreign('local_id')->references('id')->on('locals')->onDelete('cascade');
+            $table->string('tipo')->default('desconhecido'); // Adicionando o campo 'tipo'
             $table->timestamps();
         });
     }

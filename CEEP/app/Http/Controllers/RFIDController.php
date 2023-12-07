@@ -44,11 +44,22 @@ class RFIDController extends Controller
     
     private function registrarAcesso($rfid, $localId)
     {
-        // Registre o acesso na tabela de registros
+        // Verificar se o RFID pertence a um aluno
+        $aluno = Aluno::where('rfid', $rfid)->first();
+    
+        // Verificar se o RFID pertence a um usuário (caso não seja um aluno)
+        $user = $aluno ? null : User::where('rfid', $rfid)->first();
+    
+        // Determinar o tipo (aluno, usuário ou desconhecido)
+        $tipo = $aluno ? 'aluno' : ($user ? 'usuario' : 'desconhecido');
+    
+        // Registre o acesso na tabela de registros com o tipo
         Registro::create([
             'rfid' => $rfid,
             'data_hora' => now(),
             'local_id' => $localId,
+            'tipo' => $tipo,
         ]);
     }
+    
 }

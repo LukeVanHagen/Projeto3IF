@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Registro extends Model
 {
     protected $table = 'registros'; 
-    protected $fillable = ['rfid', 'data_hora', 'local_id'];
+    protected $fillable = ['rfid', 'data_hora', 'local_id', 'tipo'];
 
     public function local()
     {

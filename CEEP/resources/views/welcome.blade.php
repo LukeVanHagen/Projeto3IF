@@ -33,8 +33,10 @@
   </header>
             
         <section class="hero">
+            <div class="card-conte"> 
+
           <h1 class="titulo_home">Sejam bem vindos ao CEEP!</h1>
-          <p class="subtitu_home">CEEP,Control of Entry and Exit of People.Esse sistema tem a finalinade de controlar a entrada de alunos nos laboratórios do campus IFPE.</p>
+          <p class="subtitu_home">CEEP, Control of Entry and Exit of People. Esse sistema tem a finalinade de controlar a entrada de alunos nos laboratórios do campus IFPE.</p>
           @if (Route::has('login'))
           <div class="btn-group">
             @auth
@@ -53,6 +55,7 @@
                 @endauth
           </div>
           @endif
+          </div>
         </section>
         <br>
         <br>
@@ -88,7 +91,7 @@
 
     <section id="locate">
 
-        <div>
+        <div class="card-conte">
             <h2>Sobre</h2>
             <p>A solução proposta é a implementação de um sistema de controle de acesso baseado em tecnologia. Este sistema utilizará cartões de acesso eletrônicos e um software de gestão que permitirá o controle centralizado das entradas e saídas do laboratório. Os usuários autorizados terão cartões que lhes permitirão acessar o laboratório durante os horários estipulados, enquanto um registro detalhado de todas as atividades será mantido para fins de segurança e auditoria.</p>
             <div class="btn-group">

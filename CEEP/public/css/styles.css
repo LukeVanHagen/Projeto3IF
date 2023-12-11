@@ -10,7 +10,13 @@ body {
 	width: 100vw;
 	overflow-x: hidden;
 }
-
+.foter-img {
+    width: 400px; /* Defina a largura desejada da imagem */
+    height: auto; /* Mantenha a proporção original da imagem */
+    position: absolute; /* Posicionamento absoluto em relação ao elemento pai */
+    top: 10px; /* Distância do topo da tela */
+    right: 80px; /* Distância da direita da tela */
+  }
 
 * {
 box-sizing: border-box;
@@ -100,7 +106,6 @@ section.hero {
 	background: #6133ac;;
 	padding: 0 1em;
 	margin: 0;
-	color:black ;
 }
 
 .titulo_home {
@@ -112,9 +117,9 @@ section.hero {
 }
 
 .subtitu_home {
-	margin: 1.2rem 0;
-	font-size: 15px;
-	color: #ffffff;
+    margin: 1.2rem 0;
+    font-size: 15px;
+    color: #ffffff;
 }
 
 
@@ -135,11 +140,11 @@ section h2 {
 	font-size: 23px;
 	font-weight: 100;
 	line-height: 1.2;
-	text-align: left; /* Alinhamento à esquerda */
+	text-align: left; 
 	color: #f9f9f9;
 	margin-bottom: 32px;
-	max-width: 400px; /* Define a largura máxima */
-	display: block; /* Torna o elemento em bloco para empilhar um abaixo do outro */
+	max-width: 400px; 
+	display: block; 
 	padding-left: 20px; 
   }
   
@@ -168,29 +173,22 @@ section h2 {
 .card-cont:hover{
 	transform: scale(1.1);
 }
-
-.card-conte {
-	width: 120%;
-	max-width: 1400px;
-	margin: 0 auto;
-	color: black;
-	text-align: center;
-	border-radius: 10px;
-	box-shadow: 
-	  5px 15px 20px 6px rgba(0, 0, 0, 0.25),
-	  5px 6px 6px 6px rgba(0, 0, 0, 0.3); 
-	transition: transform 0.3s ease;
-	opacity: 1;
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-	height: 400px; 
-
-  }
-  
-
-
+.proposta{
+	background-color: #51BAF2; 
+    color: #ffffff; 
+}
+.tecnologias{
+	background-color: #A284E8; 
+    color: #3E3942; 
+}
+.funcionalidades{
+	background-color: #399DAB; 
+    color: #ffffff; 
+}
+.outras{
+	background-color: #D2B8FC; 
+    color: #3E3942; 
+}
 .p-titu {
 	margin: 20px;
 	font-size: 20px;
@@ -250,14 +248,14 @@ button.btn-outline-dark {
 /*Esse é o preenchido*/
 button.btn-filled-dark {
 	color: #f9f9f9;
-	background-color: transparent;
-    border: 1px solid #fff;
+	background-color: #51BAF2;
+    border: 1px solid #51BAF2;
 }
 
 /*Esse é o vazado com o hover*/
 .btn-outline-dark:hover {
-	background: #45413e;
-	border: 2px solid  #45413e;
+	background-color: transparent;
+	border: 2px solid #51baf2 ;
 }
 
 .btn-outline-light:hover {
@@ -291,11 +289,11 @@ button:hover,
   .btn-group a.btn-custom {
 	display: inline-block;
 	padding: 10px 20px;
-	color: #ffffff; /* Cor do texto */
+	color: #ffffff; 
 	border: none;
 	border-radius: 5px;
 	cursor: pointer;
-	transition: background-color 0.3s ease; /* Efeito de transição de cor ao passar o mouse */
+	transition: background-color 0.3s ease;
   }
   
   .btn-group a.btn-custom:hover {
@@ -535,8 +533,5 @@ footer ul li {
 		display: flex;
 		flex-direction: row;
 		grid-gap: 24px;
-	}
-	.centerResgister{
-		padding: 140px;
 	}
 }

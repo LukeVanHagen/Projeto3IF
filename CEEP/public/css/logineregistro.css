@@ -97,8 +97,8 @@ body {
 
 .login button {
     
-    background-color: transparent;
-    border: 1px solid #fff;
+    background-color: #51BAF2;
+    border: 1px solid #51BAF2;
     border-radius: 20px;
     padding: 10px 20px;
     color: #fff;
@@ -183,8 +183,8 @@ body {
 }
 
 .register button {
-    background-color: transparent;
-    border: 1px solid #fff;
+    background-color: #51BAF2;
+    border: 1px solid #51BAF2;
     border-radius: 20px;
     padding: 10px 20px;
     color: #fff;
@@ -207,7 +207,7 @@ body {
 .titulo {
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-size: 90px;
-    color: #141313;
+    color: #50117F;
     margin-left: 160px;
 }
 

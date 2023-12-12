@@ -33,18 +33,19 @@
   </header>
             
         <section class="hero">
-            <div class="card-conte"> 
-
           <h1 class="titulo_home">Sejam bem vindos ao CEEP!</h1>
-          <p class="subtitu_home">CEEP, Control of Entry and Exit of People. Esse sistema tem a finalinade de controlar a entrada de alunos nos laboratórios do campus IFPE.</p>
+          <p class="subtitu_home">CEEP,Control of Entry and Exit of People.Esse sistema tem a finalinade de controlar a entrada de alunos nos laboratórios do campus IFPE.</p>
           @if (Route::has('login'))
+          
+          <img src="http://127.0.0.1:8000/img/rfid.png" alt="Rfid" class="foter-img">
+          
           <div class="btn-group">
             @auth
             <button class="btn-filled-dark">
              <a href="{{ url('/dashboard') }}" class="btn-a">DashBoard</a>
             </button>
             @else
-            <button class="btn-filled-dark" >
+            <button class="btn-outline-dark" >
                 <a href="{{ route('login') }}" class="btn-hover-color">Entrar</a>
             </button>
                @if (Route::has('register'))
@@ -55,32 +56,32 @@
                 @endauth
           </div>
           @endif
-          </div>
+         
         </section>
         <br>
         <br>
         <br>
 
     <section class="sec-card">
-        <div class="card-cont">
+        <div class="card-cont proposta">
             <p class="p-titu">Proposta</p>
             <p class="p-info">Os usuários autorizados terão cartões para acesso, enquanto registros detalhados serão mantidos para segurança e auditoria.</p>
         </div>
-        <div class="card-cont">
+        <div class="card-cont tecnologias">
             <p class="p-titu">Tecnologias</p>
             <p class="p-info">Cartões de acesso RFID/NFC.
                          Banco de dados SQL.
                          Aplicativo web de administração.
                          Sensores de presença para ocupação.</p>
         </div>
-        <div class="card-cont">
+        <div class="card-cont funcionalidades">
             <p class="p-titu">Funcionalidades</p>
             <p class="p-info">Registro de usuários autorizados e horários de acesso.
                     Monitoramento em tempo real de entradas e saídas.
                     Alertas de acesso não autorizado.
                     Relatórios de uso para gestão e auditoria.</p>
         </div>
-        <div class="card-cont">
+        <div class="card-cont outras">
             <p class="p-titu">Outras coisas</p>
             <p class="p-info">Colocar o estiver faltando.</p>
         </div>
@@ -91,7 +92,7 @@
 
     <section id="locate">
 
-        <div class="card-conte">
+        <div>
             <h2>Sobre</h2>
             <p>A solução proposta é a implementação de um sistema de controle de acesso baseado em tecnologia. Este sistema utilizará cartões de acesso eletrônicos e um software de gestão que permitirá o controle centralizado das entradas e saídas do laboratório. Os usuários autorizados terão cartões que lhes permitirão acessar o laboratório durante os horários estipulados, enquanto um registro detalhado de todas as atividades será mantido para fins de segurança e auditoria.</p>
             <div class="btn-group">

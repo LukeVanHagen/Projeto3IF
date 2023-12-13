@@ -63,7 +63,6 @@
         },
         {
             "name": "carbonphp/carbon-doctrine-types",
-<<<<<<< HEAD
             "version": "2.1.0",
             "source": {
                 "type": "git",
@@ -74,18 +73,6 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/CarbonPHP/carbon-doctrine-types/zipball/99f76ffa36cce3b70a4a6abce41dba15ca2e84cb",
                 "reference": "99f76ffa36cce3b70a4a6abce41dba15ca2e84cb",
-=======
-            "version": "3.1.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/CarbonPHP/carbon-doctrine-types.git",
-                "reference": "a31d3358a2a5d6ae947df1691d1f321418a5f3d5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/CarbonPHP/carbon-doctrine-types/zipball/a31d3358a2a5d6ae947df1691d1f321418a5f3d5",
-                "reference": "a31d3358a2a5d6ae947df1691d1f321418a5f3d5",
->>>>>>> 28cdb8bafb41cb0a5e2f347ecba960aa3f8baf1a
                 "shasum": ""
             },
             "require": {
@@ -125,11 +112,7 @@
             ],
             "support": {
                 "issues": "https://github.com/CarbonPHP/carbon-doctrine-types/issues",
-<<<<<<< HEAD
                 "source": "https://github.com/CarbonPHP/carbon-doctrine-types/tree/2.1.0"
-=======
-                "source": "https://github.com/CarbonPHP/carbon-doctrine-types/tree/3.1.0"
->>>>>>> 28cdb8bafb41cb0a5e2f347ecba960aa3f8baf1a
             },
             "funding": [
                 {
@@ -145,11 +128,7 @@
                     "type": "tidelift"
                 }
             ],
-<<<<<<< HEAD
             "time": "2023-12-11T17:09:12+00:00"
-=======
-            "time": "2023-12-10T15:33:53+00:00"
->>>>>>> 28cdb8bafb41cb0a5e2f347ecba960aa3f8baf1a
         },
         {
             "name": "dflydev/dot-access-data",
@@ -2065,7 +2044,6 @@
             "time": "2023-10-27T15:25:26+00:00"
         },
         {
-<<<<<<< HEAD
             "name": "myclabs/php-enum",
             "version": "1.8.4",
             "source": {
@@ -2138,17 +2116,6 @@
             },
             "dist": {
                 "type": "zip",
-=======
-            "name": "nesbot/carbon",
-            "version": "2.72.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/briannesbitt/Carbon.git",
-                "reference": "2b3b3db0a2d0556a177392ff1a3bf5608fa09f78"
-            },
-            "dist": {
-                "type": "zip",
->>>>>>> 28cdb8bafb41cb0a5e2f347ecba960aa3f8baf1a
                 "url": "https://api.github.com/repos/briannesbitt/Carbon/zipball/2b3b3db0a2d0556a177392ff1a3bf5608fa09f78",
                 "reference": "2b3b3db0a2d0556a177392ff1a3bf5608fa09f78",
                 "shasum": ""
@@ -3548,7 +3515,6 @@
         },
         {
             "name": "symfony/css-selector",
-<<<<<<< HEAD
             "version": "v6.0.19",
             "source": {
                 "type": "git",
@@ -3563,22 +3529,6 @@
             },
             "require": {
                 "php": ">=8.0.2"
-=======
-            "version": "v7.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/css-selector.git",
-                "reference": "bb51d46e53ef8d50d523f0c5faedba056a27943e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/css-selector/zipball/bb51d46e53ef8d50d523f0c5faedba056a27943e",
-                "reference": "bb51d46e53ef8d50d523f0c5faedba056a27943e",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=8.2"
->>>>>>> 28cdb8bafb41cb0a5e2f347ecba960aa3f8baf1a
             },
             "type": "library",
             "autoload": {
@@ -3610,11 +3560,7 @@
             "description": "Converts CSS selectors to XPath expressions",
             "homepage": "https://symfony.com",
             "support": {
-<<<<<<< HEAD
                 "source": "https://github.com/symfony/css-selector/tree/v6.0.19"
-=======
-                "source": "https://github.com/symfony/css-selector/tree/v7.0.0"
->>>>>>> 28cdb8bafb41cb0a5e2f347ecba960aa3f8baf1a
             },
             "funding": [
                 {
@@ -3630,11 +3576,7 @@
                     "type": "tidelift"
                 }
             ],
-<<<<<<< HEAD
             "time": "2023-01-01T08:36:10+00:00"
-=======
-            "time": "2023-10-31T17:59:56+00:00"
->>>>>>> 28cdb8bafb41cb0a5e2f347ecba960aa3f8baf1a
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -8553,5 +8495,5 @@
         "php": "^8.0.2"
     },
     "platform-dev": [],
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }

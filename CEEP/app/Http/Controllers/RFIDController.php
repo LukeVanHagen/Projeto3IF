@@ -8,6 +8,8 @@ use App\Models\User;
 use App\Models\Registro;
 use App\Models\Horario;
 use Carbon\Carbon;
+use PhpMqtt\Client\Facades\MQTT;
+
 
 class RFIDController extends Controller
 {
@@ -26,11 +28,20 @@ class RFIDController extends Controller
             info("Verificando horário para aluno: {$aluno->nome}");
             if ($this->verificarHorario($aluno)) {
                 $this->registrarAcesso($rfid, $localId);
+
+                // Publica no MQTT
+                MQTT::publish('rfid-validation', json_encode([
+                    'rfid' => $rfid,
+                    'authorized' => true, // Modifique de acordo com a lógica de autorização
+                    // Outros dados necessários podem ser incluídos
+                ]));
+
                 return response()->json(['message' => "Aluno {$aluno->nome} autorizado"]);
             } else {
                 return response()->json(['message' => "A turma do aluno não possui horário disponibilizado para este momento"], 403);
             }
         }
+        
     
         $user = User::where('rfid', $rfid)->first();
     
@@ -38,6 +49,12 @@ class RFIDController extends Controller
     
         if ($user) {
             $this->registrarAcesso($rfid, $localId);
+            // Publica no MQTT
+            MQTT::publish('rfid-validation', json_encode([
+                'rfid' => $rfid,
+                'authorized' => true, // Modifique de acordo com a lógica de autorização
+                // Outros dados necessários podem ser incluídos
+            ]));
             return response()->json(['message' => "Usuário {$user->name} autorizado"]);
         }
     

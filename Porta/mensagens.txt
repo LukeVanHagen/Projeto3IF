@@ -1,0 +1,2 @@
+Mensagem de teste
+{"rfid":"21","authorized":true}

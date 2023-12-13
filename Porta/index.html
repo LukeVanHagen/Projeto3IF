@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Visualização de Mensagens MQTT</title>
+</head>
+<body>
+  <h1>Mensagens MQTT</h1>
+  <pre id="messages"></pre>
+
+  <script>
+    // Atualizar as mensagens exibidas na interface
+    async function updateMessages() {
+      const response = await fetch('http://localhost:3000/messages');
+      const messages = await response.text();
+      document.getElementById('messages').textContent = messages;
+    }
+
+    setInterval(updateMessages, 2000); // Atualizar a cada 2 segundos
+    updateMessages(); // Atualizar inicialmente
+  </script>
+</body>
+</html>

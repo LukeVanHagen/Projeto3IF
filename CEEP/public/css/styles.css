@@ -12,11 +12,19 @@ body {
 	overflow-x: hidden;
 }
 .foter-img {
+<<<<<<< HEAD
     width: 400px; 
     height: auto; 
     position: absolute; 
     top: 10px; 
     right: 80px; 
+=======
+    width: 400px; /* Defina a largura desejada da imagem */
+    height: auto; /* Mantenha a proporção original da imagem */
+    position: absolute; /* Posicionamento absoluto em relação ao elemento pai */
+    top: 10px; /* Distância do topo da tela */
+    right: 80px; /* Distância da direita da tela */
+>>>>>>> 1c0c85d3a96d3379f371a330ae213a877c93b8ce
   }
 
 * {
@@ -519,7 +527,28 @@ footer ul li {
 		background-size: 30%;
 		background-position: 90% 60%;
 	}
-
+	.card-conte {
+		width: 120%;
+		max-width: 1400px;
+		margin: 0 auto;
+		color: black;
+		text-align: center;
+		border-radius: 10px;
+		box-shadow: 
+		  5px 15px 20px 6px rgba(0, 0, 0, 0.25),
+		  5px 6px 6px 6px rgba(0, 0, 0, 0.3); 
+		transition: transform 0.3s ease;
+		opacity: 1;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		height: 400px; 
+	
+	  }
+	  .centerResgister{
+		padding: 140px;
+	}	
 
 	#locate p {
 		width: 40%;

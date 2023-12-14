@@ -27,7 +27,7 @@ mqttClient.on('connect', () => {
 mqttClient.on('message', (topic, message) => {
   console.log(`Mensagem recebida no tópico ${topic}: ${message.toString()}`);
   messages.push(message.toString());
-
+ 
   // Envia a mensagem para os clientes conectados via WebSocket
   wss.clients.forEach((client) => {
     if (client.readyState === WebSocket.OPEN) {

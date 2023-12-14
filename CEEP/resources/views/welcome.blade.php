@@ -22,7 +22,7 @@
     </head>
     <body class="antialiased">
     <header>
-      
+
     <nav>
   <ul class="navigation-menu">
     <li><a href="#" class="strong underline">Home</a></li>
@@ -31,7 +31,7 @@
   </ul>
 </nav>
   </header>
-            
+
         <section class="hero">
           <h1 class="titulo_home">Sejam bem vindos ao CEEP!</h1>
           <p class="subtitu_home">CEEP,Control of Entry and Exit of People.Esse sistema tem a finalinade de controlar a entrada de alunos nos laboratórios do campus IFPE.</p>
@@ -106,11 +106,10 @@
     <footer>
 
         <ul>
-           
+
         </ul>
 
     </footer>
 
     </body>
 </html>
-

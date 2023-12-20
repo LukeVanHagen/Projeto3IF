@@ -25,6 +25,7 @@
 	margin-bottom: 20px;
 	box-sizing: border-box;
 	position: relative;
+	background-color: white;
 }
 
 .card-conteiner {
@@ -43,6 +44,7 @@
 
 .card-bodi {
 	padding: 15px;
+	background-color: white;
 }
 
 .card-foter {
@@ -53,6 +55,7 @@
 	padding: 10px;
 	justify-content: center;
 	display: flex;
+	
 }
 
 .foter-img {
@@ -89,8 +92,3 @@ select {
 nav {
     background-color: #A284E8;
 }
-<<<<<<< HEAD
-
-
-=======
->>>>>>> 1c0c85d3a96d3379f371a330ae213a877c93b8ce

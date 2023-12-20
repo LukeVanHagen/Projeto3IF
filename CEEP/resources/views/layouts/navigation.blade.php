@@ -5,14 +5,14 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
-                        <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
+                    <a href="{{ route('registros.index') }}">
+                       <img src="{{ asset('img/PsicoMaisLogo.png') }}">
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-nav-link :href="route('registros.index')" :active="request()->routeIs('registro.index')">
+                    <x-nav-link :href="route('registros.index')" :active="request()->routeIs('registros.index')">
                         {{ __('Registros') }}
                     </x-nav-link>
                     <x-nav-link :href="route('local.create')" :active="request()->routeIs('local.create')">

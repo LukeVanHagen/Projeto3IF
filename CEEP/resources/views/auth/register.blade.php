@@ -11,7 +11,7 @@
                     <div class="card">
             <div class="register">
                 <h2>Cadastre-se</h2>
-                <p>Bem vindo ao CEEP ! Cadastre-se para começar.</p>
+                <p>Bem vindo ao CEP! Cadastre-se para começar.</p>
                 <form method="POST" action="{{ route('register') }}">
                     <form method="POST" action="{{ route('register') }}" class="register">
                         @csrf
@@ -63,7 +63,7 @@
                     </form>
                 </form>
             </div>
-            <h1 class="titulo">CEEP</h1>
+            <h1 class="titulo">CEP</h1>
         </div>
 
     </div>  

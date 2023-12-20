@@ -13,7 +13,7 @@
         
       <div class="register">
         <h2>Login</h2>
-        <p>Insira suas credênciais para acessar o CEEP !<p>
+        <p>Insira suas credênciais para acessar o CEP !<p>
         <form method="POST" action="{{ route('login') }}">
             <form method="POST" action="{{ route('login') }}" class="register"> 
                 @csrf
@@ -25,7 +25,7 @@
                 </div>
 
                 <div class="mt-4">
-                    <x-input-label for="password" :value="__('Password')" class="px-2 label text-white" />
+                    <x-input-label for="password" :value="__('Senha')" class="px-2 label text-white" />
                     <x-text-input id="password" class="block mt-1 w-full"
                                     type="password"
                                     name="password"
@@ -55,7 +55,7 @@
             </form>
             
     </div>
-    <h1 class="titulo">CEEP</h1>
+    <h1 class="titulo">CEP</h1>
 </div>
         
 </div>   

@@ -3,10 +3,42 @@
 <head>
   <meta charset="UTF-8">
   <title>Exibição de Mensagens MQTT</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+   /* Estilo para Porta autorizada */
+  .status-porta.autorizado {
+    width: 100px;
+    height: 100px;
+    background-color: #4CAF50; /* Verde */
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    font-size: 18px;
+  }
+
+  /* Estilo para Porta não autorizada */
+  .status-porta.nao-autorizado {
+    width: 100px;
+    height: 100px;
+    background-color: #f44336; /* Vermelho */
+    color: white;
+    text-align: center;
+    line-height: 100px;
+    font-size: 18px;
+  }
+  </style>
 </head>
 <body>
+  <div class="card">
   <h1>Mensagens MQTT</h1>
   <ul id="messageList"></ul>
+  </div>
+
+  <!-- Adicionando uma div para representar a porta -->
+  <div id="porta" class="status-porta nao-autorizado">Porta</div>
+
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <script src="subscriber.js"></script>
 
   <script>
     const socket = new WebSocket('ws://localhost:3000');
@@ -16,7 +48,23 @@
       const newMessage = document.createElement('li');
       newMessage.textContent = event.data;
       messageList.appendChild(newMessage);
-    }); 
+
+      // Chama a função para atualizar o estado da porta com base na mensagem recebida
+    updatePortaState(JSON.parse(event.data));
+  });
+  function updatePortaState(rfidStatus) {
+  const portaDiv = document.getElementById('porta');
+  if (rfidStatus.authorized) {
+    console.log('Porta autorizada - Atualizar interface com cor verde');
+    portaDiv.className = 'status-porta autorizado';
+    portaDiv.textContent = 'Autorizado';
+  } else {
+    console.log('Porta não autorizada - Atualizar interface com cor vermelha');
+    portaDiv.className = 'status-porta nao-autorizado';
+    portaDiv.textContent = 'Não Autorizado';
+  }
+}
+
   </script>
 </body>
 </html>

@@ -10,6 +10,9 @@ const wss = new WebSocket.Server({ server });
 // Conecta-se ao servidor MQTT
 const mqttClient = mqtt.connect('mqtt://localhost:1883'); // Altere se necessário
 
+// Estado inicial da autorização da porta
+let portaAutorizada = false;
+
 // Array para armazenar mensagens recebidas
 let messages = [];
 
@@ -26,7 +29,10 @@ mqttClient.on('connect', () => {
 
 mqttClient.on('message', (topic, message) => {
   console.log(`Mensagem recebida no tópico ${topic}: ${message.toString()}`);
-  messages.push(message.toString());
+  const rfidStatus = JSON.parse(message.toString());
+
+  // Atualiza o estado da autorização da porta
+  portaAutorizada = rfidStatus.authorized;
  
   // Envia a mensagem para os clientes conectados via WebSocket
   wss.clients.forEach((client) => {

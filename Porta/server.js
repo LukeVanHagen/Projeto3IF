@@ -18,7 +18,7 @@ let messages = [];
 
 mqttClient.on('connect', () => {
   console.log('Conectado ao servidor MQTT');
-  mqttClient.subscribe('rfid-validation', (err) => {
+  mqttClient.subscribe('rfid-validation-local-1', (err) => {
     if (err) {
       console.error('Erro ao se inscrever no tópico:', err);
     } else {

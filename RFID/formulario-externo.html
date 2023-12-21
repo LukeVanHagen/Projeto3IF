@@ -11,91 +11,82 @@
             align-items: center;
             justify-content: center;
             height: 100vh;
-            background-color: #f2f2f2; /* Cor de fundo para visualização */
-            font-family: Arial, sans-serif; /* Fonte padrão */
-        }
-
-        .container {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100%;
         }
 
         .card {
             background-color: #6133ac;
             width: 300px;
-            height: auto;
+            height: 200px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            justify-items: center;
+            box-sizing: border-box;
             border-radius: 30px;
             padding: 30px;
-            color: #fff;
-            box-sizing: border-box;
+            position: relative;
+
         }
 
-        .card input[type="text"],
-        .card select {
-            width: calc(100% - 20px);
+        .card input {
+            width: 100%;
             padding: 10px;
             margin-bottom: 10px;
-            border: 1px solid #fff;
-            border-radius: 20px;
-            display: block;
             box-sizing: border-box;
-            background-color: transparent;
-            color: #fff;
+            border: 1px solid rgb(255, 255, 255);
+            border-radius: 20px;
+            display: inline-block;
         }
 
         .card label {
             display: block;
             margin-bottom: 10px;
+            color: #fff;
+            font-family: Arial, Helvetica, sans-serif;
         }
 
         .button-add {
-            border: 1px solid #fff;
-            background-color: #fff;
+
+            border: 1px solid #ffff;
+            background-color: #ffff;
             padding: 10px 20px;
             border-radius: 30px;
             font-size: 20px;
             color: #6133ac;
             transition: 0.2s all ease-in-out;
             text-transform: uppercase;
-            cursor: pointer;
+
         }
 
         .button-add:hover {
-            color: #fff;
+
+            color: #ffff;
             background-color: #6133ac;
+            cursor: pointer;
             border-color: #fff;
         }
 
         .card-footer {
+
+            justify-content: right;
+            width: 90%;
             display: flex;
-            justify-content: flex-end;
-            width: 100%;
             padding: 10px;
             margin: 10px;
         }
     </style>
 </head>
 <body>
-    <div class="container">
+    <div class="conteiner">
         <div class="card">
-            <form id="rfidForm">
-                <label for="rfid">RFID:</label>
-                <input type="text" id="rfid" name="rfid" required>
+        <form id="rfidForm">
+            <label for="rfid">RFID:</label>
+            <input type="text" id="rfid" name="rfid" required>
 
-                <label for="localId">Selecione o ambiente:</label>
-                <select id="localId" name="localId">
-                    <option value="1">Ambiente 1</option>
-                    <option value="2">Ambiente 2</option>
-                    <!-- Adicione mais opções conforme necessário -->
-                </select>
-
-                <div class="card-footer">
-                    <button type="button" class="button-add" onclick="enviarRFID()">Enviar</button>
-                </div>
-            </form>
+            <!-- Campo oculto para o ID do local -->
+            <input type="hidden" id="localId" name="localId" value="1">
+          <div class="card-footer">
+            <button type="button" class="button-add" onclick="enviarRFID()">Enviar</button>
+          </div>
+        </form>
         </div>
     </div>
 
@@ -104,9 +95,10 @@
             var form = document.getElementById('rfidForm');
             var formData = new FormData(form);
             var valorDoRFID = document.getElementById('rfid').value;
-            var localId = document.getElementById('localId').value; // Obtém o valor do local selecionado
 
-            formData.set('localId', localId); // Atualiza o valor do local no formulário
+            // Atualiza o valor do campo oculto com o ID do local
+            var localId = 1; // Substitua pelo valor desejado
+            document.getElementById('localId').value = localId;
 
             fetch('http://127.0.0.1:8000/api/processar-rfid', {
                 method: 'POST',
@@ -128,6 +120,12 @@
                 alert('Usuário não autorizado'); // Exibe a mensagem de usuário não autorizado
             });
         }
+
+        // Adiciona um evento de escuta para o submit do formulário
+        document.getElementById('rfidForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Previne o comportamento padrão de envio
+            enviarRFID(); // Chama a função para enviar os dados
+        });
     </script>
 </body>
 </html>

@@ -81,10 +81,7 @@
                     Alertas de acesso não autorizado.
                     Relatórios de uso para gestão e auditoria.</p>
         </div>
-        <div class="card-cont outras">
-            <p class="p-titu">Outras coisas</p>
-            <p class="p-info">Colocar o estiver faltando.</p>
-        </div>
+        
 
     </section>
     <br>
